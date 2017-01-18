@@ -1,0 +1,79 @@
+/*
+@ Front-end Developer & UI Designer by alico
+@ http://alico.me */
+
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700&subset=latin,latin-ext);
+* { position: relative; margin: 0; padding: 0 } 
+
+body  			{ background: #eee ; font: 300 14px 'Source Sans Pro';  text-size-adjust: 100%;}
+header 			{ background: white; height: 250px; text-align: center; }
+header .con		{ display:flex; height:100%; align-items:center; justify-content:center }
+header h1		{ font-weight: 600; margin-bottom:5px; font-size: 50px}
+header h1 span	{ font-weight: 300}
+header a		{ font-weight: 300; color:#56afed; font-size:17px; text-decoration:none;}
+header a:hover	{ color:#ff4106}
+
+.con  			{ width: 90%; max-width: 1170px; margin: 0 auto }
+
+.doc 			{ padding: 50px 0 }
+.doc section 	{ margin-bottom: 80px}
+.doc .cod 		{ background: white; margin-top: 30px;  padding: 20px 20px 16px 20px; color:#666; }
+.doc .cod pre	{ overflow: auto; }
+.doc code 		{ line-height: 20px;-webkit-text-stroke:.5px rgba(0,0,0,.3); }
+.doc .sam 		{ margin:20px 0 20px 0 }
+.doc .dsc h4 	{ font-size: 24px; color:#333;font-weight:700  }
+.doc .dsc p 	{ font-size: 15px;letter-spacing: .3px; -webkit-text-stroke:.5px rgba(0,0,0,.4); }
+.doc .dsc  		{ text-align: center; margin-bottom: 20px; border-bottom: 1px solid #ddd; padding-bottom: 30px }
+
+.doc .dsc.ara 	 { border-bottom: 0 }
+.doc .dsc.ara hr { background: #ddd; height: 1px ; width: 100%; border: 0; position: absolute; width: 100%;z-index: 0; top:10px }
+.doc .dsc.ara 	 { margin-top: 23px;  padding-bottom: 23px;  }
+.doc .dsc.ara p span 	 { background: #eee; padding:0 10px;z-index: 1 }
+
+.doc .sam  span { display: block; padding: 10px; box-sizing:border-box; background: #EFC25F; text-align: center; color:white; }
+
+.doc .sam .kesme{ text-align: center; margin-bottom: 15px}
+.doc .sam .kesme b s{ position: absolute; top: 8px; height:1px; background: #ddd; width: 50px; }
+.doc .sam .kesme b {  font-weight: 400; font-size: 16px }
+.doc .sam .kesme b s{ position: absolute; top: 11px ;height:1px; background: #C5C5C5; width: 30px; }
+.doc .sam .kesme b s.sol{ left: -40px }
+.doc .sam .kesme b s.sag{ right: -40px }
+
+.doc section h5.no 			{ text-align: center; font-size: 25px; font-weight: 300; padding-top: 15px; margin-bottom: 35px }
+.doc section h5.no s 		{ position: absolute; top: 18px ;height:1px; background: #C5C5C5; width: 30px; }
+.doc section h5.no s.sol 	{ left: -40px }
+.doc section h5.no s.sag 	{ right: -40px }
+
+
+.doc .cod  > i { width: 0;
+height: 0;
+border-style: solid;
+border-width: 0 8px 10px 8px;
+border-color: transparent transparent #ffffff transparent;
+position: absolute;
+left: 50%;
+margin-left:-10px;
+top: -9px
+}
+
+.s_05 .row > .col:nth-child(2n+1) span { background-color:#8387C1 }
+
+.s_08 .row		{ height: 100px; background: #F7D997}
+.s_08 .row span	{ background: white; color:#222;}
+
+.s_08_1 .a span	{ padding: 20px 10px}
+.s_08_1 .b span	{ padding: 40px 10px}
+.s_08_1 .c span	{ padding: 10px 10px}
+
+.s_15 .row 		{ background: #6588D2}
+.s_15 .row 		{ background: #6588D2}
+
+
+.s_16_1 .col span.a { height:180px;}
+.s_16_2 .col span.a { height:180px;}
+
+@media (max-width: 640px) {
+
+	.doc code{ font-size: 12px; letter-spacing: -.2px }
+
+}

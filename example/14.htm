@@ -1,0 +1,80 @@
+ <section id="14">
+	<h5 class="no"><span>14<s class="sol"></s><s class="sag"></s></span></h5>
+    <div class="dsc">
+        <h4>Offset Öteleme</h4>
+        <p>left yada right yönünde sütunları öteleyebiliriz</p>
+    </div>
+
+    <div class="sam">
+        
+        
+        <div class="row center">
+            <div class="col-1 left-5 right-5"><span>A</span></div>
+            <div class="col-2 left-5 right-5"><span>B</span></div>
+            <div class="col-3 left-4 right-4"><span>C</span></div>
+        </div>
+
+         
+    </div>
+<div class="cod"><i></i><?php echo '<pre><code class="html">';
+echo htmlentities('<div class="row center">
+    <div class="col-1 left-5 right-5"></div>
+    <div class="col-2 left-5 right-5"></div>
+    <div class="col-3 left-4 right-4"></div>
+</div>');
+echo '</code></pre>' ?>
+</div>
+
+
+<div class="dsc ara">
+    <hr/>
+    <p><span>Farklı Örnekler</span></p>
+</div>
+
+<div class="sam">
+	<div class="row">
+	    <div class="col-2 right-10"><span>A</span></div>
+	    <div class="col-4 right-8"><span>B</span></div>
+	</div>
+
+	<div class="row">
+	    <div class="col-2 left-10"><span>A</span></div>
+	    <div class="col-4 left-8"><span>B</span></div>
+	</div>
+</div>
+
+<div class="cod"><i></i><?php echo '<pre><code class="html">';
+echo htmlentities('<div class="row">
+    <div class="col-2 right-10"></div>
+    <div class="col-4 right-8"></div>
+</div>
+
+<div class="row">
+    <div class="col-2 left-10">/div>
+    <div class="col-4 left-8"></div>
+</div>');
+echo '</code></pre>' ?>
+</div>
+
+<div class="dsc ara">
+    <hr/>
+    <p><span>Ekrana Göre Formatlama</span></p>
+</div>
+
+<div class="sam">
+	<div class="row">
+	    <div class="col-2 right-5 right-xs-7"><span>A</span></div>
+	    <div class="col-4 col-sm-6 left-3 left-sm-5"><span>B</span></div>
+	</div>
+</div>
+
+<div class="cod"><i></i><?php echo '<pre><code class="html">';
+echo htmlentities('<div class="sam">
+	<div class="row">
+	    <div class="col-2 right-5 right-xs-7"></div>
+	    <div class="col-4 col-sm-6 left-3 left-sm-5"></div>
+	</div>
+</div>');
+echo '</code></pre>' ?>
+</div>
+</section>

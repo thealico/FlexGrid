@@ -1,0 +1,201 @@
+$gut-s     : (.6rem,.3rem);       // space small size  set
+$gut-b     : (1.5rem,2.5rem);    //  space big size set
+$gut       : 1rem;
+
+// -  -  -   -  -   -  -
+
+$gl-ms         : "screen and (max-width: 23.5em)";  // up to 376px
+$gl-xs         : "screen and (max-width: 35.5em)";  // up to 568px
+$gl-sm         : "screen and (max-width: 48em)";    // max 768px
+$gl-md         : "screen and (max-width: 64em)";    // max 1024px
+$gl-lg         : "screen and (max-width: 80em)";    // max 1280px
+
+// -  -  -   -  -   -  -
+
+$glp_col-1     : (100%/12);
+$glp_col-2     : ($glp_col-1*2);
+$glp_col-3     : ($glp_col-1*3);
+$glp_col-4     : ($glp_col-1*4);
+$glp_col-5     : ($glp_col-1*5);
+$glp_col-6     : ($glp_col-1*6);
+$glp_col-7     : ($glp_col-1*7);
+$glp_col-8     : ($glp_col-1*8);
+$glp_col-9     : ($glp_col-1*9);
+$glp_col-10    : ($glp_col-1*10);
+$glp_col-11    : ($glp_col-1*11);
+$glp_col-12    : 100%;
+
+// -  -  -   -  -   -  -
+
+$glp_col-5-12  : (100%/5);
+$glp_col-7-12  : (100%/7);
+$glp_col-8-12  : (100%/8);
+$glp_col-9-12  : (100%/9);
+$glp_col-10-12 : (100%/10);
+$glp_col-11-12 : (100%/11);
+
+// -  -  -   -  -   -  -
+
+$set-1         : ($glp_col-1,$glp_col-2,$glp_col-3,$glp_col-4,$glp_col-5,$glp_col-6,$glp_col-7,$glp_col-8,$glp_col-9,$glp_col-10,$glp_col-11,$glp_col-12);
+$set-2         : ($glp_col-12,$glp_col-6,$glp_col-4,$glp_col-3,$glp_col-5-12,$glp_col-2,$glp_col-7-12,$glp_col-8-12,$glp_col-9-12,$glp_col-10-12,$glp_col-11-12,$glp_col-1);
+
+
+// -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -   -  -  -  -  -  -  -  -  -  
+// @ MakeRowItems 
+
+@mixin makeRowItems($tag:false) {
+    
+   [class*="row-"],.row {
+      
+      &.center#{$tag}              { justify-content: center}
+      &.end#{$tag}                 { justify-content: flex-end; /*align-self: flex-end; margin-left: auto*/ }
+      &.start#{$tag}               { justify-content: flex-start}
+      &.between#{$tag}             { justify-content: space-between }
+      &.around#{$tag}              { justify-content: space-around }
+      
+      &.top#{$tag}                 { align-items: flex-start }
+      &.middle#{$tag}              { align-items: center }
+      &.bottom#{$tag}              { align-items: flex-end }
+      &.stretch#{$tag}             { align-items: stretch  }
+      &.baseline#{$tag}            { align-items: baseline  }
+      
+      &.direct-x#{$tag}            { flex-direction: row  }
+      &.direct-xr#{$tag}           { flex-direction: row-reverse  }
+      &.direct-yr#{$tag}           { flex-direction: column-reverse; > [class*="col"]{ flex-basis: auto } }
+      &.direct-y#{$tag}            { flex-direction: column; > [class*="col"]{ flex-basis: auto }}
+      
+      &.c-nb#{$tag} > *             { padding-bottom:0 }
+      &.c-ob#{$tag} > *             { padding-bottom:$gut }
+
+      &.c-nf#{$tag} > *             { flex:none }
+   }
+}
+
+// -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -   -  -  -  -  -  -  -  -  -  
+// @ Rows 
+
+@mixin makeGridByNumber($row:false)
+{
+   @for $i from 0 to length($set-1) {
+      .row-#{$row}#{$i+1} > *  { flex-basis:nth($set-2, $i+1);    max-width:nth($set-2, $i+1); } 
+   }
+}
+
+
+// -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -   -  -  -  -  -  -  -  -  -  
+// @ Columns 
+
+@mixin makeCol($col:false)
+{
+   @if not $col {
+      
+      @for $i from 0 to length($set-1) {
+        .col-#{$i+1}  { flex-basis:nth($set-1, $i+1);    max-width:nth($set-1, $i+1); }
+      }
+
+   }@else {
+  	
+      [class*="col-"],.col {
+
+        &.col-#{$col}-top         { align-self: flex-start }
+        &.col-#{$col}-middle      { align-self: center }
+        &.col-#{$col}-bottom      { align-self: flex-end }
+        &.col-#{$col}-first       { order: -1 }
+        &.col-#{$col}-last        { order: 1 }
+        &.col-#{$col}-ng          { padding:0 }
+      }
+
+      @for $i from 0 to length($set-1){
+        .col-#{$col}-#{$i+1}  { flex-basis:nth($set-1, $i+1);    max-width:nth($set-1, $i+1); }
+      }
+      
+	}
+}
+
+// Offset
+
+@mixin makeOff($off)
+{
+   
+   [class*="row-"],.row{
+
+      > *.left#{$off}-0  { margin-left:0; }
+
+      @for $i from 0 to length($set-1)-1 {
+         > *.left#{$off}-#{$i+1}  { margin-left:nth($set-1, $i+1); }
+      }
+
+      > *.right#{$off}-0  { margin-right:0; }
+
+      @for $i from 0 to length($set-1)-1 {
+         > *.right#{$off}-#{$i+1}  { margin-right:nth($set-1, $i+1); }
+      }
+   }
+}
+
+// Orders
+
+@mixin makeOrder( $tag:false )
+{
+   @for $i from 1 through 10 {
+     
+      @if not $tag { 
+         
+         .order-#{$i} { order:#{$i} }
+
+      }@else{
+        
+        .order-#{$tag}#{$i} { order:#{$i} }
+      }
+  }
+}
+
+// Space
+
+@mixin makeSpace($mod)
+{
+   
+   // gutter big size
+
+   @for $i from 0 to length($gut-b ) {
+      
+      $v :nth($gut-b , $i+1);
+      .gut-#{$i+1}#{$mod}                { margin-left:(-$v/2); margin-right:(-$v/2);
+         > *                             { padding-left:($v/2); padding-right:($v/2); padding-bottom:$v }
+         &.row.c-ob#{$mod}               { padding-bottom:$v  }
+      }
+    }
+   
+   // gutter small size
+   
+   @for $i from 0 to length($gut-s ) {
+    
+      $v :nth($gut-s , $i+1);
+      .-gut-#{$i+1}#{$mod}             { margin-left:(-$v/2); margin-right:(-$v/2);
+         > *                           { padding-left:($v/2); padding-right:($v/2); padding-bottom:$v  }
+         &.row.c-ob#{$mod} > *         { padding-bottom:$v  }
+      }
+   }
+ 
+  // gutter normal size
+
+   .gut#{$mod}                         { margin-left:(-$gut/2); margin-right:(-$gut/2);
+      > *                              { padding-left:($gut/2); padding-right:($gut/2); padding-bottom:$gut  }
+      &.row.c-ob#{$mod} > *            { padding-bottom:$gut  }
+   }
+
+
+  .gut-cr-1#{$mod}       { padding-right:nth($gut-b ,2)/2 }
+  .gut-cr-2#{$mod}       { padding-right:nth($gut-b ,2)/2 }
+  .gut-cl-1#{$mod}       { padding-left:nth($gut-b ,2)/2 }
+  .gut-cl-2#{$mod}       { padding-left:nth($gut-b ,2)/2 }
+  .gut-cr#{$mod}         { padding-right:($gut/2) }
+  .gut-cl#{$mod}         { padding-left:($gut/2) }
+
+  .-gut-cr-1#{$mod}      { padding-right:nth($gut-s ,1)/2 }
+  .-gut-cr-2#{$mod}      { padding-right:nth($gut-s ,2)/2 }
+  .-gut-cl-1#{$mod}      { padding-left:nth($gut-s ,1)/2 }
+  .-gut-cl-2#{$mod}      { padding-left:nth($gut-s ,2)/2 }
+  .-gut-cl#{$mod}        { padding-left:($gut/2) }
+  .-gut-cr#{$mod}        { padding-right:($gut/2) }
+}

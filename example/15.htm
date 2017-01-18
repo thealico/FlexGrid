@@ -1,0 +1,49 @@
+ <section id="15">
+    <h5 class="no"><span>15<s class="sol"></s><s class="sag"></s></span></h5>
+    <div class="dsc">
+        <h4>Sütun Alt Boşluk Sıfırlama</h4>
+        <p>c-nb( child no bottom ) etiketi ile row'un sütunlarının bottom space aralığını iptal edin</p>
+    </div>
+
+    <div class="sam s_15">
+        <div class="row c-nb">
+            <div class="col"><span>A</span></div>
+            <div class="col"><span>B</span></div>
+            <div class="col"><span>C</span></div>
+        </div>
+    </div>
+
+<div class="cod"><i></i><?php echo '<pre><code class="html">';
+echo htmlentities('<div class="row c-ns">
+    <div class="col"></div>
+    <div class="col"></div>
+    <div class="col"></div>
+</div>');
+echo '</code></pre>' ?>
+</div>
+
+
+<div class="dsc ara">
+    <hr/>
+    <p><span>c-ob (child on-bottom) ilede dileğimiz ekran aralığında tekrar bottom aktfi yapabiliriz </span></p>
+</div>
+
+<div class="sam s_15">
+ 	<div class="row c-nb c-ob-sm direct-y-sm">
+        <div class="col"><span>A</span></div>
+        <div class="col"><span>B</span></div>
+        <div class="col"><span>C</span></div>
+    </div>
+</div>
+
+<div class="cod"><i></i><?php echo '<pre><code class="html">';
+echo htmlentities('<div class="row c-nb c-ob-sm direct-y-sm">
+    <div class="col"></div>
+    <div class="col"></div>
+    <div class="col"></div>
+</div>');
+echo '</code></pre>' ?>
+</div>
+
+
+</section>

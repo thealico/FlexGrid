@@ -1,0 +1,43 @@
+ <section id="04">
+<h5 class="no"><span>05<s class="sol"></s><s class="sag"></s></span></h5>
+    <div class="dsc">
+        <h4>Sütunun Tebiri Satırın Takdirini Bozar</h4>
+        <p>satırın sütuna verdiği takdirin ömrü sütunun kendine verdiği hükme kadardır</p>
+    </div>
+
+    <div class="sam">
+        
+        <div class="row-4">
+            <div class="col-6"><span>A COL-6</span></div>
+            <div class="col"><span>B</span></div>
+            <div class="col"><span>C</span></div>
+        </div>
+         
+    </div>
+<div class="cod"><i></i><?php echo '<pre><code class="html">';
+echo htmlentities('<div class="row-4">
+    <div class="col-6"></div>
+    <div class="col"></div>
+    <div class="col"></div>
+</div>');
+echo '</code></pre>' ?>
+</div>
+
+    <div class="sam">
+        
+        <div class="row">
+            <div class="col"><span>A / Auto</span></div>
+            <div class="col-2"><span>B</span></div>
+            <div class="col-6"><span>C</span></div>
+        </div>
+         
+    </div>
+<div class="cod"><i></i><?php echo '<pre><code class="html">';
+echo htmlentities('<div class="row">
+    <div class="col"></div>
+    <div class="col-2"></div>
+    <div class="col-6"></div>
+</div>');
+echo '</code></pre>' ?>
+</div>
+</section>

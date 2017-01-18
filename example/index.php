@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Flexbox Grid Sistem</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/xample.css">
+    <link rel="stylesheet" href="css/example.css">
     <link rel="stylesheet" href="../dist/grid.min.css">
 </head>
 

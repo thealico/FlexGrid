@@ -2,10 +2,12 @@
 @ Front-end Developer & UI Designer by alico
 @ http://alico.me */
 
-@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700&subset=latin,latin-ext);
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&subset=latin-ext');
+
 * { position: relative; margin: 0; padding: 0 } 
 
-body  			{ background: #eee ; font: 300 14px 'Source Sans Pro';  text-size-adjust: 100%;}
+body  			{ background: #eee ; font:400 14px 'Roboto';  text-size-adjust: 100%;}
 header 			{ background: white; height: 250px; text-align: center; }
 header .con		{ display:flex; height:100%; align-items:center; justify-content:center }
 header h1		{ font-weight: 600; margin-bottom:5px; font-size: 50px}
@@ -21,8 +23,8 @@ header a:hover	{ color:#ff4106}
 .doc .cod pre	{ overflow: auto; }
 .doc code 		{ line-height: 20px;-webkit-text-stroke:.5px rgba(0,0,0,.3); }
 .doc .sam 		{ margin:20px 0 20px 0 }
-.doc .dsc h4 	{ font-size: 24px; color:#333;font-weight:700  }
-.doc .dsc p 	{ font-size: 15px;letter-spacing: .3px; -webkit-text-stroke:.5px rgba(0,0,0,.4); }
+.doc .dsc h4 	{ font:700 24px 'Roboto';   color:#333; }
+.doc .dsc p 	{ font-size: 15px; letter-spacing:.1px; line-height:20px; }
 .doc .dsc  		{ text-align: center; margin-bottom: 20px; border-bottom: 1px solid #ddd; padding-bottom: 30px }
 
 .doc .dsc.ara 	 { border-bottom: 0 }

@@ -2,7 +2,7 @@
     <h5 class="no"><span>15<s class="sol"></s><s class="sag"></s></span></h5>
     <div class="dsc">
         <h4>Sütun Alt Boşluk Sıfırlama</h4>
-        <p>c-nb( child no bottom ) etiketi ile row'un sütunlarının bottom space aralığını iptal edin</p>
+        <p>c-nb( col no bottom ) etiketi ile row'un sütunlarının padding-bottom  aralığını iptal eder</p>
     </div>
 
     <div class="sam s_15">
@@ -14,7 +14,7 @@
     </div>
 
 <div class="cod"><i></i><?php echo '<pre><code class="html">';
-echo htmlentities('<div class="row c-ns">
+echo htmlentities('<div class="row c-nb">
     <div class="col"></div>
     <div class="col"></div>
     <div class="col"></div>
@@ -25,7 +25,7 @@ echo '</code></pre>' ?>
 
 <div class="dsc ara">
     <hr/>
-    <p><span>c-ob (child on-bottom) ilede dileğimiz ekran aralığında tekrar bottom aktfi yapabiliriz </span></p>
+    <p><span>c-ob (child on-bottom) etiketi ile istediğimiz grid modunda aktif edebilme desteği vardır</span></p>
 </div>
 
 <div class="sam s_15">

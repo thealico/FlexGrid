@@ -10,4 +10,20 @@ Bu listede genel kullanıma göre **ms** adlı beşinci bir ufak aralık görmek
 | Sass Media Değişken  |   $gl-ms  |  $gl-xs  |  $gl-sm  |  $gl-md  | $gl-lg  |
 
 
+Col'un Aldığı Değerler
+
+| Değer  | Açıklama |
+| --------- | ------------------------ |
+| col-top        | .. |
+| col-middle        | .. |
+| col-bottom        | .. |
+| col-first        | .. |
+| col-last        | .. |
+| col-ns        | .. |
+| col-ns        | .. |
+
+
+
+
+
 

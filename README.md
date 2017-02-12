@@ -12,15 +12,42 @@ Bu listede genel kullanıma göre **ms** adlı beşinci bir ufak aralık görmek
 
 Col'un Aldığı Değerler
 
-| Değer  | Açıklama |
+| Değer  | Media Destek |
 | --------- | ------------------------ |
-| col-top        | .. |
-| col-middle        | .. |
-| col-bottom        | .. |
-| col-first        | .. |
-| col-last        | .. |
-| col-ns        | .. |
-| col-ns        | .. |
+| col-top        | var |
+| col-middle        | var |
+| col-bottom        | var |
+| col-first        | var |
+| col-last        | var |
+| col-ns        | var |
+| col-ns        | var |
+
+
+| Değer  | Media Destek |
+| --------- | ------------------------ |
+| center        | var |
+| start        | var |
+| between        | var |
+| around        | var |
+| end        | var |
+| top        | var |
+| middle        | var |
+| bottom        | var |
+| stretch        | var |
+| baseline        | var |
+| direct-x        | var |
+| direct-xr        | var |
+| direct-y        | var |
+| direct-yr         | var |
+|cp         | var |
+|c-nb         | var |
+|c-ob         | var |
+|c-eh         | yok |
+|c-eh         | yok |
+|c-nf         | yok |
+|ns           | yok |
+|nsc           | yok |
+
 
 
 

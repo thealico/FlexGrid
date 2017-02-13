@@ -13,10 +13,15 @@ Bu listede genel kullanıma göre **ms** adlı beşinci bir ufak aralık görmek
 Satırlar ve sütunların class etiketleri  Bootstrap aşina olduğumuz şekide  **row** ve **col** olarak atandı. Col (col-1 > col 12) ve row (row-1 > row-12) kullanılıyor. Media aralığına göre formatlamak içinde yine media prefix (col-xs- ) ekleriyle birlikte yazıyoruz.
 
 
-| Etiket    | Sütun Aralıkları    | Media Aralıkları      |
-| ---       | ---                 |---                    |
-| row       |  row-1 > row-12     | row-xs-1  > row-md-12  |
-| col       |  col-1 > col-12     | col-xs-1  > col-md-12  |
+| Etiket    | Açıklama                                                       |
+| ---       | ---                                                            |
+| row       | Satır etiket ismi                                              |
+| row-      | 1 den 12 ye kadar sütunlarını kaçarlı olacağı değeri alır      | 
+| row-      | -ms -xs -sm -md -lg media eklerini alır                        |
+| col       | Sütun etiketi ismi (tek başına kullanılır)                     |
+| col-      | 1 den 12 ye kadar kaçarlı sütun değeri alır                    |
+| col       | Sütun etiketi ismi                                             |
+
 
 ##Row
 

@@ -4,30 +4,42 @@ Bu grid modeli 12 sütun üzerine [flexbox](http://www.w3schools.com/css/css3_fl
 Bu listede genel kullanıma göre **ms** adlı beşinci bir ufak aralık görmektesiniz. Bu aralık mobilin yatay ve dikey kullanımına göre farklı özelleştirebilme ihtiyacından doğmuştur. Bunu tercih etmeseniz [grid.scss](https://github.com/thealico/flexboxgrid/blob/master/src/style/grid.scss) dosyasından ms etiketiyle dönen değerleri disable etmeniz yeterli olacaktır.
 
 
-| Media Değerleri  | MS <br> ( 376 > )  | XS <br> ( 568 > ) | SM <br> ( 768 > )  |   MD <br> ( 1024 > )  |  LG <br> ( 1280 > )  |
-| --- | --- | --- | --- | --- | --- | --- |
-| Class Prefix         |   -ms   | -xs   |  -sm  |  -md  |  -lg  |
-| Sass Media Değişken  |   $gl-ms  |  $gl-xs  |  $gl-sm  |  $gl-md  | $gl-lg  |
+| Media Değerleri      | MS <br> ( 376 > )  | XS <br> ( 568 > ) | SM <br> ( 768 > )  |   MD <br> ( 1024 > )  |  LG <br> ( 1280 > )  |
+| ---                  | ---                | ---               | ---                |  ---                  | ---                  |
+| Class Prefix         | -ms                | -xs               |  -sm               |  -md                  | -lg                 |
+| Sass Media Değişken  |  $gl-ms            |  $gl-xs           |  $gl-sm            |  $gl-md               | $gl-lg               |
 
 
-Grid sistemindeki  satırlar ve sütunların class etiketleri aşina olduğumuz şekide  **row** ve **col** olarak atandı. Sırasıyal gidelim şimdi. 
+Satırlar ve sütunların class etiketleri  Bootstrap aşina olduğumuz şekide  **row** ve **col** olarak atandı. Col (col-1 > col 12) ve row (row-1 > row-12) kullanılıyor. Media aralığına göre formatlamak içinde yine media prefix (col-xs- ) ekleriyle birlikte yazıyoruz.
+
+
+| Etiket    | Sütun Aralıkları    | Media Aralıkları      |
+| ---       | ---                 |---                    |
+| row       |  row-1 > row-12     | row-xs-1  > row-md-12  |
+| col       |  col-1 > col-12     | col-xs-1  > col-md-12  |
 
 ##Row
 
-Flexbox gridlerin önceki nesil sistemlere göre ayrışan en belirgin özelliği col sütun değerini belirtmeye gereken kalmadan otomatik yada belirli bir değerde olması gerektiği bilgilerinin row üzerinden atanabilmesidir. Bu çok daha esnek yapıları hızlıca çıkarmımıza olanak tanır. 
-
-Basitçe örneklerler isek  aşağıdaki row içinde dört col otomatik olarak 100% üzerinden 4'e bölünerek yerleşim gösterecektir.
+Flexbox Grid lerde  önceki nesil metodlara göre ayrışan en belirgin özellik col sütun sayısı değerini belirtmeye gereken kalmadan otomatik verebiliriz. Yada satırın (row) kendisine içinde sütünların (col) kaçarlı sütun olacağını söylebiliriz. Mesala aşağıdaki örnekte üç sütun var bu otomatik olarak üçe bölüneceği anlamına gelir. Eğer dört tane koyar isek dörde bölünecektir.
 
 ```
 <div class="row">
-  <div class="col"></div>
+  <div class="col">%33.33</div>
+  <div class="col">%33.33</div>
+  <div class="col">%33.33</div>
+</div>
+```
+
+Buraya bakalım şimdi **row-2** verilmiş buna göre aşağıdaki kutular iki sütun genişliğinde dizilecektir. 
+
+```
+<div class="row-2">
   <div class="col"></div>
   <div class="col"></div>
   <div class="col"></div>
 </div>
 ```
-
-Şimdi bu örneği şu şekilde yapalım. Sondaki sütun'a col-6 verdik geriye kalan 3 sütun ise  6 sütunluk genişlik payı için 3'e otomatik olarak bölünecetir.
+Olayı biraz daha detay katalım. Sütuna (row) bir şart atamayalım, ancak içerdeki sütunlardan sadece birine sütun sayısı verelim. Buna göre aşağıdaki örneğin çıktısında son sütun 6 genişliğinde olacaktır. Diğer sütunlar ise kalan alanı eşit şekilde paylaşacaktır.
 
 ```
 <div class="row">
@@ -38,17 +50,7 @@ Basitçe örneklerler isek  aşağıdaki row içinde dört col otomatik olarak 1
 </div>
 ```
 
-Devam edelim satıra bu sefer row-2 diyelim bu seferde içindeki sütunlar col-2 değerinde dizileceklerdir
-
-```
-<div class="row-2">
-  <div class="col"></div>
-  <div class="col"></div>
-  <div class="col"></div>
-</div>
-```
-
-Şimdi aşağıdaki tablodan row'un aldığı referansları ve açıklamlarını bakabilirsiniz. Örnekleri görmek içinde değerlere verdiğim **linke ** tıklamanız yeterli olacaktır.
+Şimdi aşağıdaki tablodan row'un aldığı referansları ve açıklamlarını bakabilirsiniz. Örnekleri görmek içinde değerlere verdiğim **linke** tıklamanız yeterli olacaktır.
 
 
 | Değer               | Media Destek | Açıklama |
@@ -80,9 +82,6 @@ Devam edelim satıra bu sefer row-2 diyelim bu seferde içindeki sütunlar col-2
 | col-first           | Var   | Sütunu sol başa konumlar |
 | col-last            | Var   | Sütunu sağ sona konumlar |
 | col-ns              | Yok   | Sütunun padding boşluklarını sıfırlar |
-
-
-
 
 
 

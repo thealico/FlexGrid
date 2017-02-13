@@ -62,8 +62,8 @@ Olayı biraz daha detay katalım. Sütuna (row) bir şart atamayalım, ancak iç
 | ------------------- | ----- | ------------------------ |
 | [center](http://alico.me/labs/grid/example/#07)              | Var   | Sütunları yatayada ortalar|
 | [start](http://alico.me/labs/grid/example/#07)               | Var   | Sütünları sola yaslı sıralar |
-| between             | Var   | Sütünları sol ve sağa doğru sonlandırarak sıralar |
-| around              | Var   | Sütunları merkeden ortalayarak sağa ve sola doğru sıralar |
+| [between](http://alico.me/labs/grid/example/#11)              | Var   | Sütünları sol ve sağa doğru sonlandırarak sıralar |
+| [around](http://alico.me/labs/grid/example/#12)              | Var   | Sütunları merkeden ortalayarak sağa ve sola doğru sıralar |
 | [end](http://alico.me/labs/grid/example/#07)                 | Var   | Sütunları sağa doğru yaslıyarak sıralar|
 | top                 | Var   | Sütunları üste yaslar |
 | [middle](http://alico.me/labs/grid/example/#08)              | Var   | Sütünları dikeyde rtalar|

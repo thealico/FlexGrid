@@ -6,39 +6,38 @@ Bu listede genel kullanıma göre **ms** adlı beşinci bir ufak aralık görmek
 
 | Media Değerleri  | MS <br> ( 376 > )  | XS <br> ( 568 > ) | SM <br> ( 768 > )  |   MD <br> ( 1024 > )  |  LG <br> ( 1280 > )  |
 | --- | --- | --- | --- | --- | --- | --- |
-| Class Prefix         |   ms   | xs   |  sm  |  md  |  lg  |
+| Class Prefix         |   -ms   | -xs   |  -sm  |  -md  |  -lg  |
 | Sass Media Değişken  |   $gl-ms  |  $gl-xs  |  $gl-sm  |  $gl-md  | $gl-lg  |
 
+Grid sistemindeki  satırlar ve sütunların class etiketleri aşina olduğumuz şekide  **row** ve **col** olarak atadık. 
 
-Col'un Aldığı Değerler
+| Değer               | Media | Açıklama |
+| ------------------- | ----- | ------------------------ |
+| col-top             | Var   | Sütunu üste konumlar |
+| col-middle          | Var   | Sütunu dikeyde ortaya konumlar |
+| col-bottom          | Var   | Sütunu alta konumlanır |
+| col-first           | Var   | Sütunu sol başa konumlar |
+| col-last            | Var   | Sütunu sağ sona konumlar |
+| col-ns              | Yok   | Sütunun padding boşluklarını sıfırlar |
+
+
 
 | Değer               | Media Destek | Açıklama |
 | ------------------- | ----- | ------------------------ |
-| col-top             | var   | Sütunu üste konumlar |
-| col-middle          | var   | Sütunu dikeyde ortaya konumlar |
-| col-bottom          | var   | Sütunu alta konumlanır |
-| col-first           | var   | Sütunu sol başa konumlar |
-| col-last            | var   | Sütunu sağ sona konumlar |
-| col-ns              | yok   | Sütunun padding boşluklarını sıfırlar |
-
-
-
-| Değer               | Media Destek | Açıklama |
-| ------------------- | ----- | ------------------------ |
-| center              | var   | Sütunları yatayada ortalar|
-| start               | var   | Sütünları sola yaslı sıralar |
-| between             | var   | Sütünları sol ve sağa doğru sonlandırarak sıralar |
-| around              | var   | Sütunları merkeden ortalayarak sağa ve sola doğru sıralar |
-| end                 | var   | Sütunları sağa doğru yaslıyarak sıralar|
-| top                 | var   | Sütunları üste yaslar |
-| middle              | var   | Sütünları dikeyde rtalar|
-| bottom              | var   | Sütunları alta yaslar|
-| stretch             | var   ||
-| baseline            | var   ||
-| direct-x            | var   | Sütünları yatay sıralar |
-| direct-xr           | var   | Sütünları yatay ve ters sırada yapar |
-| direct-y            | var   | Sütünları dikey sıralar|
-| direct-yr           | var   | Sütunları dikey ve terst sıraya yapar|
+| center              | Var   | Sütunları yatayada ortalar|
+| start               | Var   | Sütünları sola yaslı sıralar |
+| between             | Var   | Sütünları sol ve sağa doğru sonlandırarak sıralar |
+| around              | Var   | Sütunları merkeden ortalayarak sağa ve sola doğru sıralar |
+| end                 | Var   | Sütunları sağa doğru yaslıyarak sıralar|
+| top                 | Var   | Sütunları üste yaslar |
+| middle              | Var   | Sütünları dikeyde rtalar|
+| bottom              | Var   | Sütunları alta yaslar|
+| stretch             | Var   ||
+| baseline            | Var   ||
+| direct-x            | Var   | Sütünları yatay sıralar |
+| direct-xr           | Var   | Sütünları yatayda ters sıralanır  |
+| direct-y            | Var   | Sütünları dikey sıralar|
+| direct-yr           | Var   | Sütunları dikey ter sıralanır |
 
 
 

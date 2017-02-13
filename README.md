@@ -22,8 +22,6 @@ Satırlar ve sütunların class etiketleri  Bootstrap aşina olduğumuz şekide 
 | col-      | 1 den 12 ye kadar kaçarlı sütun değeri alır                    |
 | col-      | -ms -xs -sm -md -lg media eklerini alır (col-xs-6)             |
 
-##Row
-
 Flexbox Grid lerde  önceki nesil metodlara göre ayrışan en belirgin özellik col sütun sayısı değerini belirtmeye gereken kalmadan otomatik verebiliriz. Yada satırın (row) kendisine içinde sütünların (col) kaçarlı sütun olacağını söylebiliriz. Mesala aşağıdaki örnekte üç sütun var bu otomatik olarak üçe bölüneceği anlamına gelir. Eğer dört tane koyar isek dörde bölünecektir.
 
 ```
@@ -96,6 +94,11 @@ Sütunun (col) aldığı referanslar aşağıdaki tabloda görüldüğü gibidir
 | [col-last](http://192.168.1.60/htm/labs/flexboxgrid/example/#10)            | Var   | Sütunu son sıraya alır |
 | [order-](http://192.168.1.60/htm/labs/flexboxgrid/example/#10.1)        | Var   | Sütunu istedğimiz sıraya almayı sağlar 1 den 10 kadar desteği vardır |
 | [order-xs-](http://192.168.1.60/htm/labs/flexboxgrid/example/#10.2)        | Var   | Sütunu istedğimiz sıraya almayı sağlar 1 den 10 kadar desteği vardır |
+| [left-](http://192.168.1.60/htm/labs/flexboxgrid/example/#14)        | Var   | BootStrap dan bildiğiniz Offset ile öteleme desteği vardır left- 1 den 12 ye kadar destekler ve media (left-xs-) yer alır |
+| [right-](http://192.168.1.60/htm/labs/flexboxgrid/example/#14)        | Var   | Aynı şekilde offset right da yer alıyor |
+
+
+
 
 
 

@@ -1,6 +1,10 @@
 # Flexbox Grid
 Bu grid modeli 12 sütun üzerine [flexbox](http://www.w3schools.com/css/css3_flexbox.asp) tekniği ile inşa edilmiştir. Css üreticisi olarak Sass, görev yöneticisi olarakta Gulp tercih edilmiştir. Media değer aralıkları aşağıdaki tabloda görüldüğü gibidir.
 
+[Demo Sayfası](http://alico.me/labs/grid/example/)
+
+
+
 | Media Değerleri      | MS <br> ( 376 > )  | XS <br> ( 568 > ) | SM <br> ( 768 > )  |   MD <br> ( 1024 > )  |  LG <br> ( 1280 > )  |
 | ---                  | ---                | ---               | ---                |  ---                  | ---                  |
 | Class Prefix         | -ms                | -xs               |  -sm               |  -md                  | -lg                 |
@@ -94,7 +98,7 @@ Sütunun (col) aldığı referanslar aşağıdaki tabloda görüldüğü gibidir
 | [col-last](http://192.168.1.60/htm/labs/flexboxgrid/example/#10)            | Var   | Sütunu son sıraya alır |
 | [order-](http://192.168.1.60/htm/labs/flexboxgrid/example/#10.1)        | Var   | Sütunu istedğimiz sıraya almayı sağlar 1 den 10 kadar desteği vardır |
 | [order-xs-](http://192.168.1.60/htm/labs/flexboxgrid/example/#10.2)        | Var   | Sütunu istedğimiz sıraya almayı sağlar 1 den 10 kadar desteği vardır |
-| [left-](http://192.168.1.60/htm/labs/flexboxgrid/example/#14)        | Var   | BootStrap dan bildiğiniz Offset ile öteleme desteği vardır left- 1 den 12 ye kadar destekler ve media (left-xs-) yer alır |
+| [left-](http://192.168.1.60/htm/labs/flexboxgrid/example/#14)        | Var   | BootStrap dan bildiğiniz Offset ile öteleme desteği vardır left- 1 den 12 ye kadar destekler yine media (left-xs-) desteğide yer alır|
 | [right-](http://192.168.1.60/htm/labs/flexboxgrid/example/#14)        | Var   | Aynı şekilde offset right da yer alıyor |
 
 

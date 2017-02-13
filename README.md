@@ -56,7 +56,8 @@ Olayı biraz daha detay katalım. Sütuna (row) bir şart atamayalım, ancak iç
 
 ----------
 
-### Row'un aldığı referanlar
+### Satır (Row) Referansları
+Satırın (row) aldığı referansları aşağıdaki tabloda görüldüğü gibidir. Media (-ms,-xs,-sm,-md,-lg) desteği kapsayanlar var olarak işaretlenmiştir. Referans linklerine tıklayarak çalışan örnekleri bakabilirsiniz.
 
 | Değer               | Media Destek | Açıklama |
 | ------------------- | ----- | ------------------------ |
@@ -70,24 +71,31 @@ Olayı biraz daha detay katalım. Sütuna (row) bir şart atamayalım, ancak iç
 | [bottom](http://alico.me/labs/grid/example/#08)              | Var   | Sütunları alta yaslar|
 | stretch             | Var   ||
 | baseline            | Var   ||
-| direct-x            | Var   | Sütünları yatay sıralar |
-| direct-xr           | Var   | Sütünları yatayda ters sıralanır  |
-| direct-y            | Var   | Sütünları dikey sıralar|
-| direct-yr           | Var   | Sütunları dikey ter sıralanır |
-| [ns](http://alico.me/labs/grid/example/#05)                 | -     | Gutter boşlukları sıfırlar |
+| [direct-x](http://alico.me/labs/grid/example/#09)             | Var   | Varsayılan sıralama düzeni yatay sıralama |
+| [direct-xr](http://alico.me/labs/grid/example/#09)            | Var   | Yatayda sırayı ters çevirir |
+| [direct-y](http://alico.me/labs/grid/example/#09.1)           | Var   | Sütünları dikey sıralar|
+| [direct-yr](http://alico.me/labs/grid/example/#09.2)          | Var   | Dikeydeki sıralamayı ters çevirir |
+| [ns](http://alico.me/labs/grid/example/#05)                   | -     | Gutter boşlukları sıfırlar |
+| [c-nb](http://alico.me/labs/grid/example/#15)| Var     | Child No Bottom - Sütun alt bottom boşluğu pasifleştirir |
+| [c-ob](http://alico.me/labs/grid/example/#15.1)| Var     | Child On Bottom - Sütun alt bottom boşluğu etkinleştir |
+| c-nf| Yok     | Child No Flex - Row özelliği verilmiş sütunun flex özelliğini kaldrır |
+| [c-eh](http://alico.me/labs/grid/example/#16)| Yok     | Child Equal Height - Sütunlara yükseklik eşleme desteği atar |
 
 
-##Col
+## Sütun (Col) Referansları
 
+Sütunun (col) aldığı referanslar aşağıdaki tabloda görüldüğü gibidir. Media (-ms,-xs,-sm,-md,-lg) desteği kapsayanlar var olarak işaretlenmiştir. Referans linklerine tıklayarak çalışan örnekleri bakabilirsiniz.
 
 | Değer               | Media | Açıklama |
 | ------------------- | ----- | ------------------------ |
-| col-top             | Var   | Sütunu üste konumlar |
-| col-middle          | Var   | Sütunu dikeyde ortaya konumlar |
-| col-bottom          | Var   | Sütunu alta konumlanır |
-| col-first           | Var   | Sütunu sol başa konumlar |
-| col-last            | Var   | Sütunu sağ sona konumlar |
-| col-ns              | Yok   | Sütunun padding boşluklarını sıfırlar |
+| [col-top](http://192.168.1.60/htm/labs/flexboxgrid/example/#08.4)          | Var   | Sütunu üste yaslar |
+| [col-middle](http://192.168.1.60/htm/labs/flexboxgrid/example/#08.3)          | Var   | Sütunu dikeyde ortaya yaslar |
+| [col-bottom ](http://192.168.1.60/htm/labs/flexboxgrid/example/#08.1)         | Var   | Sütunu alta yaslar |
+| [col-ns]()             | Yok   | Sütunun padding boşluklarını sıfırlar |
+| [col-first](http://192.168.1.60/htm/labs/flexboxgrid/example/#10)           | Var   | Sütunu ilk sıraya alır |
+| [col-last](http://192.168.1.60/htm/labs/flexboxgrid/example/#10)            | Var   | Sütunu son sıraya alır |
+| [order-](http://192.168.1.60/htm/labs/flexboxgrid/example/#10.1)        | Var   | Sütunu istedğimiz sıraya almayı sağlar 1 den 10 kadar desteği vardır |
+| [order-xs-](http://192.168.1.60/htm/labs/flexboxgrid/example/#10.2)        | Var   | Sütunu istedğimiz sıraya almayı sağlar 1 den 10 kadar desteği vardır |
 
 
 

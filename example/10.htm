@@ -34,7 +34,7 @@ echo htmlentities('<div class="row">
 </div>');
 echo '</code></pre>' ?>
 </div>
-
+<span id="10.1"></span>
 <div class="dsc ara">
     <hr/>
     <p><span>Order ile Sıra Değiştir 10'a kadar destekler</span></p>
@@ -56,6 +56,33 @@ echo htmlentities('<div class="row">
     <div class="col order-4"> A 01 </div>
     <div class="col order-3"> B 02 </div>
     <div class="col order-1"> C 03 </div>
+    <div class="col order-2"> D 04 </div>
+</div>');
+echo '</code></pre>' ?>
+</div>
+
+<span id="10.2"></span>
+<div class="dsc ara">
+    <hr/>
+    <p><span>Ekrana göre formatlama destekler</span></p>
+</div>
+
+<div class="sam">
+    
+    <div class="row">
+        <div class="col order-4 order-xs-1"><span>A 01</span></div>
+        <div class="col order-3"><span>B 02</span></div>
+        <div class="col order-1 order-xs-4"><span>C 03</span></div>
+        <div class="col order-2"><span>D 04</span></div>
+    </div>
+     
+</div>
+
+<div class="cod"><i></i><?php echo '<pre><code class="html">';
+echo htmlentities('<div class="row">
+    <div class="col order-4 order-xs-1"> A 01 </div>
+    <div class="col order-3"> B 02 </div>
+    <div class="col order-1 order-xs-4"> C 03 </div>
     <div class="col order-2"> D 04 </div>
 </div>');
 echo '</code></pre>' ?>

@@ -8,6 +8,8 @@ Bu grid modeli 12 sütun üzerine [flexbox](http://www.w3schools.com/css/css3_fl
 
 Bu listede genel kullanıma göre **ms** adlı beşinci bir ufak aralık görmektesiniz. Bu aralık mobilin yatay ve dikey kullanımına göre farklı özelleştirebilme ihtiyacından doğmuştur. Bunu tercih etmeseniz [grid.scss](https://github.com/thealico/flexboxgrid/blob/master/src/style/grid.scss) dosyasından ms etiketiyle dönen değerleri yorumlamak yeterli olacaktır.
 
+----------
+
 Satırlar ve sütunların class etiketleri  Bootstrap aşina olduğumuz şekide  **row** ve **col** olarak atandı. Col (col-1 > col 12) ve row (row-1 > row-12) kullanılıyor. Media aralığına göre formatlamak içinde yine media prefix (col-xs- ) ekleriyle birlikte yazıyoruz.
 
 
@@ -52,25 +54,27 @@ Olayı biraz daha detay katalım. Sütuna (row) bir şart atamayalım, ancak iç
 </div>
 ```
 
-Şimdi aşağıdaki tablodan row'un aldığı referansları ve açıklamlarını bakabilirsiniz. Örnekleri görmek içinde değerlere verdiğim **linke** tıklamanız yeterli olacaktır.
+----------
 
+### Row'un aldığı referanlar
 
 | Değer               | Media Destek | Açıklama |
 | ------------------- | ----- | ------------------------ |
-| center              | Var   | Sütunları yatayada ortalar|
-| start               | Var   | Sütünları sola yaslı sıralar |
+| [center](http://alico.me/labs/grid/example/#07)              | Var   | Sütunları yatayada ortalar|
+| [start](http://alico.me/labs/grid/example/#07)               | Var   | Sütünları sola yaslı sıralar |
 | between             | Var   | Sütünları sol ve sağa doğru sonlandırarak sıralar |
 | around              | Var   | Sütunları merkeden ortalayarak sağa ve sola doğru sıralar |
-| end                 | Var   | Sütunları sağa doğru yaslıyarak sıralar|
+| [end](http://alico.me/labs/grid/example/#07)                 | Var   | Sütunları sağa doğru yaslıyarak sıralar|
 | top                 | Var   | Sütunları üste yaslar |
-| middle              | Var   | Sütünları dikeyde rtalar|
-| bottom              | Var   | Sütunları alta yaslar|
+| [middle](http://alico.me/labs/grid/example/#08)              | Var   | Sütünları dikeyde rtalar|
+| [bottom](http://alico.me/labs/grid/example/#08)              | Var   | Sütunları alta yaslar|
 | stretch             | Var   ||
 | baseline            | Var   ||
 | direct-x            | Var   | Sütünları yatay sıralar |
 | direct-xr           | Var   | Sütünları yatayda ters sıralanır  |
 | direct-y            | Var   | Sütünları dikey sıralar|
 | direct-yr           | Var   | Sütunları dikey ter sıralanır |
+| [ns](http://alico.me/labs/grid/example/#05)                 | -     | Gutter boşlukları sıfırlar |
 
 
 ##Col

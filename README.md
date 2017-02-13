@@ -12,41 +12,35 @@ Bu listede genel kullanıma göre **ms** adlı beşinci bir ufak aralık görmek
 
 Col'un Aldığı Değerler
 
-| Değer  | Media Destek |
-| --------- | ------------------------ |
-| col-top        | var |
-| col-middle        | var |
-| col-bottom        | var |
-| col-first        | var |
-| col-last        | var |
-| col-ns        | var |
-| col-ns        | var |
+| Değer               | Media Destek | Açıklama |
+| ------------------- | ----- | ------------------------ |
+| col-top             | var   | Sütunu üste konumlar |
+| col-middle          | var   | Bulunduğu kasanın yüksekliğinde ortaya konumlar |
+| col-bottom          | var   | Sütunu alta konumlanır |
+| col-first           | var   | Sütunu sol başa konumlar |
+| col-last            | var   | Sütunu sağ sona konumlar |
+| col-ns              | yok   | Sütunun padding boşluklarını sıfırlar |
 
 
-| Değer  | Media Destek |
-| --------- | ------------------------ |
-| center        | var |
-| start        | var |
-| between        | var |
-| around        | var |
-| end        | var |
-| top        | var |
-| middle        | var |
-| bottom        | var |
-| stretch        | var |
-| baseline        | var |
-| direct-x        | var |
-| direct-xr        | var |
-| direct-y        | var |
-| direct-yr         | var |
-|cp         | var |
-|c-nb         | var |
-|c-ob         | var |
-|c-eh         | yok |
-|c-eh         | yok |
-|c-nf         | yok |
-|ns           | yok |
-|nsc           | yok |
+
+| Değer               | Media Destek | Açıklama |
+| ------------------- | ----- | ------------------------ |
+| center              | var   | |
+| start               | var   ||
+| between             | var   ||
+| around              | var   ||
+| end                 | var   ||
+| top                 | var   ||
+| middle              | var   ||
+| bottom              | var   ||
+| stretch             | var   ||
+| baseline            | var   ||
+| direct-x            | var   ||
+| direct-xr           | var   ||
+| direct-y            | var   ||
+| direct-yr           | var   ||
+|cp                   | var   ||
+
 
 
 

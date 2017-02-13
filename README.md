@@ -15,7 +15,7 @@ Col'un Aldığı Değerler
 | Değer               | Media Destek | Açıklama |
 | ------------------- | ----- | ------------------------ |
 | col-top             | var   | Sütunu üste konumlar |
-| col-middle          | var   | Bulunduğu kasanın yüksekliğinde ortaya konumlar |
+| col-middle          | var   | Sütunu dikeyde ortaya konumlar |
 | col-bottom          | var   | Sütunu alta konumlanır |
 | col-first           | var   | Sütunu sol başa konumlar |
 | col-last            | var   | Sütunu sağ sona konumlar |
@@ -25,21 +25,20 @@ Col'un Aldığı Değerler
 
 | Değer               | Media Destek | Açıklama |
 | ------------------- | ----- | ------------------------ |
-| center              | var   | |
-| start               | var   ||
-| between             | var   ||
-| around              | var   ||
-| end                 | var   ||
-| top                 | var   ||
-| middle              | var   ||
-| bottom              | var   ||
+| center              | var   | Sütunları yatayada ortalar|
+| start               | var   | Sütünları sola yaslı sıralar |
+| between             | var   | Sütünları sol ve sağa doğru sonlandırarak sıralar |
+| around              | var   | Sütunları merkeden ortalayarak sağa ve sola doğru sıralar |
+| end                 | var   | Sütunları sağa doğru yaslıyarak sıralar|
+| top                 | var   | Sütunları üste yaslar |
+| middle              | var   | Sütünları dikeyde rtalar|
+| bottom              | var   | Sütunları alta yaslar|
 | stretch             | var   ||
 | baseline            | var   ||
-| direct-x            | var   ||
-| direct-xr           | var   ||
-| direct-y            | var   ||
-| direct-yr           | var   ||
-|cp                   | var   ||
+| direct-x            | var   | Sütünları yatay sıralar |
+| direct-xr           | var   | Sütünları yatay ve ters sırada yapar |
+| direct-y            | var   | Sütünları dikey sıralar|
+| direct-yr           | var   | Sütunları dikey ve terst sıraya yapar|
 
 
 

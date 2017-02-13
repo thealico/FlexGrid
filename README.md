@@ -16,12 +16,11 @@ Satırlar ve sütunların class etiketleri  Bootstrap aşina olduğumuz şekide 
 | Etiket    | Açıklama                                                       |
 | ---       | ---                                                            |
 | row       | Satır etiket ismi                                              |
-| row-      | 1 den 12 ye kadar sütunlarını kaçarlı olacağı değeri alır      | 
-| row-      | -ms -xs -sm -md -lg media eklerini alır                        |
+| row-      | 1 den 12 ye kadar sütunlarının kaçarlı olacağı değeri alır     | 
+| row-      | -ms -xs -sm -md -lg media eklerini alır    (row-xs-3)          |
 | col       | Sütun etiketi ismi (tek başına kullanılır)                     |
 | col-      | 1 den 12 ye kadar kaçarlı sütun değeri alır                    |
-| col       | Sütun etiketi ismi                                             |
-
+| col-      | -ms -xs -sm -md -lg media eklerini alır (col-xs-6)             |
 
 ##Row
 

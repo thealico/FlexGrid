@@ -1,18 +1,16 @@
 /*
-@ Flexbox Grid Version 2.0  - https://github.com/thealico/flexboxgrid
+@ Flexbox Grid Version 1.5.0  - https://github.com/thealico/flexboxgrid
 @ Front-end Developer by Ali Akman (alico) 
 @ http://alico.me  */
 
-$set                : (
-   
-   'columns'         : 12,
+$set                 : (
 
+   'columns'         : 12,
    'gut'             : (
-      'd'            : 1rem,										// default
-      's'            : (.6rem,.3rem),							// small
-      'b'            : (1.5rem,2.5rem)							// big
+      'd'            : 1rem,						
+      's'            : (.6rem,.3rem),					
+      'b'            : (1.5rem,2.5rem)	
    ),
-   
    'screen'   			: (
    	'ms'           : 23.5em,
       'xs'           : 35.5em,
@@ -20,25 +18,18 @@ $set                : (
       'md'           : 64em,
       'lg'           : 80em
    ),
-
    'options'         :  (
-
       'offset'       :  false,
       'space'        :  true,
       'order'        :  true,
    ),
-
    'screen-rule'  	: 'max',
-
    'select'          : (
       'row'          : '[class*="row"]',
       'col'      		: '[class*="row"] > *',
       'col-one'      : '[class*="col"]',
       'col-row'      : '[class*="row"][class*="col"]'
    )
-
-
-
 );
 
 

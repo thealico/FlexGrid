@@ -1,5 +1,5 @@
 /*
-@ Flexbox Grid Version 2.0  - https://github.com/thealico/flexboxgrid
+@ Flexbox Grid Version 1.5.0  - https://github.com/thealico/flexboxgrid
 @ Front-end Developer by Ali Akman (alico) 
 @ http://alico.me  */
 
@@ -19,13 +19,13 @@
 @include make-space(null);
 
 @each $key, $value in $set-screen {
-	@media #{$value} { 
-    	@include make-row-number(-#{$key});
+	@media #{$value}{ 
+		@include make-row-number(-#{$key});
 		@include make-col-number(-#{$key});
-    	@include make-row-option(-#{$key}); 
-    	@include make-col-option(-#{$key}); 
-    	@include make-offset(-#{$key});
-    	@include make-order(-#{$key});
-    	@include make-space(-#{$key});
-   }
+		@include make-row-option(-#{$key}); 
+		@include make-col-option(-#{$key}); 
+		@include make-offset(-#{$key});
+		@include make-order(-#{$key});
+		@include make-space(-#{$key});
+	}
 }

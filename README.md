@@ -3,12 +3,10 @@ Bu grid modeli 12 sütun üzerine [flexbox](http://www.w3schools.com/css/css3_fl
 
 [Demo Sayfası](http://alico.me/labs/grid/example/)
 
-
-
 | Media Değerleri      | MS <br> ( 376 > )  | XS <br> ( 568 > ) | SM <br> ( 768 > )  |   MD <br> ( 1024 > )  |  LG <br> ( 1280 > )  |
 | ---                  | ---                | ---               | ---                |  ---                  | ---                  |
 | Class Prefix         | -ms                | -xs               |  -sm               |  -md                  | -lg                 |
-| Sass Media Değişken  |  $gl-ms            |  $gl-xs           |  $gl-sm            |  $gl-md               | $gl-lg               |
+| Sass Media Değişken  |  $fg-ms            |  $fg-xs           |  $fg-sm            |  $fg-md               | $fg-lg               |
 
 Bu listede genel kullanıma göre **ms** adlı beşinci bir ufak aralık görmektesiniz. Bu aralık mobilin yatay ve dikey kullanımına göre farklı özelleştirebilme ihtiyacından doğmuştur. Bunu tercih etmeseniz [grid.scss](https://github.com/thealico/flexboxgrid/blob/master/src/style/grid.scss) dosyasından ms etiketiyle dönen değerleri yorumlamak yeterli olacaktır.
 

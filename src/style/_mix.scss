@@ -1,0 +1,182 @@
+/*
+@ Flexbox Grid Version 2.0  - https://github.com/thealico/flexboxgrid
+@ Front-end Developer by Ali Akman (alico) 
+@ http://alico.me  */
+
+
+@mixin make-row-number($n:false)          
+{
+   @for $i from 0 to $set-column          {
+      .row#{$n}-#{$i+1} > *               { flex-basis:nth($set-row, $i+1); max-width:nth($set-row, $i+1) } 
+   }
+}
+
+@mixin make-col-number($n:false)          
+{
+   @for $i from 0 to $set-column          {
+      #{$select-row } > .col#{$n}-#{$i+1} { flex-basis:nth($set-col, $i+1); max-width:nth($set-col, $i+1) }
+   }
+}
+
+@mixin make-row-option($n:false)       
+{
+
+   #{$select-row}                      {
+
+      &.center#{$n}                    { justify-content: center}
+      &.end#{$n}                       { justify-content: flex-end }
+      &.start#{$n}                     { justify-content: flex-start }
+      &.between#{$n}                   { justify-content: space-between }
+      &.around#{$n}                    { justify-content: space-around }
+      &.top#{$n}                       { align-items: flex-start }
+      &.middle#{$n}                    { align-items: center }
+      &.bottom#{$n}                    { align-items: flex-end }
+      &.stretch#{$n}                   { align-items: stretch }
+      &.baseline#{$n}                  { align-items: baseline }
+      &.direct-x#{$n}                  { flex-direction: row  }
+      &.direct-xr#{$n}                 { flex-direction: row-reverse  }
+      &.direct-yr#{$n}                 { flex-direction: column-reverse }
+      &.direct-y#{$n}                  { flex-direction: column }
+      &.direct-yr#{$n},&.direct-y#{$n} { > #{$select-colone} { flex-basis: auto; width:100% } }
+      
+      &.c-nb#{$n} > *                  { padding-bottom:0 }
+      &.c-ob#{$n} > *                  { padding-bottom:$gut }
+      &.c-nf#{$n} > *                  { flex:none }
+      
+      @if not $n                       { 
+
+         &.ns                          { margin-left:0; margin-right:0 }
+         &.nsc                         { margin-left:auto; margin-right:auto }
+         &.ns,&.nsc                    {
+            > #{$select-colone}        { padding-left:0; padding-right:0; padding-bottom:0 } 
+         }
+
+         &.c-nf > *                    { flex:none }
+         &.c-eh > *                    { display:flex;
+            > .equal                   { width:100%; height:auto; display:block }
+         }
+      }
+   }
+}
+
+@mixin make-col-option($n:false)       
+{
+
+   #{$select-row}                      {
+
+      .tc#{$n}-top                     { align-self: flex-start }
+      .tc#{$n}-middle                  { align-self: center }
+      .tc#{$n}-bottom                  { align-self: flex-end }
+      .tc#{$n}-first                   { order: -1 }
+      .tc#{$n}-last                    { order: 1 }
+      .tc#{$n}-ns                      { padding-left:0; padding-right: 0; padding-bottom: 0 }
+      .tc#{$n}-ob                      { padding-bottom:$gut }
+      
+      @for $i from 0 to length($gut-b) { 
+         &.gut-#{$i+1} .tc#{$n}-ob     { padding-bottom:nth($gut-b,$i+1) }
+      }
+
+      @for $i from 0 to length($gut-s) { 
+         &.-gut-#{$i+1} .tc#{$n}-ob    { padding-bottom:nth($gut-s,$i+1) }
+      }
+
+      @if not $n                     { 
+         > .equal                    { height:100%; display:block }
+      }
+
+   }
+}
+
+@mixin make-padding( $n:false )  
+{
+
+   #{$select-row}                { 
+      &.cp                       {
+
+         > *  { padding-left:($gut/2); padding-right:($gut/2) }
+      
+         @for $i from 0 to length($gut-s) {
+
+            $v : nth($gut-s,$i+1);
+            &.-gut-#{$i+1} > *     { padding-left:($v/2); padding-right:($v/2) }
+         }
+
+         @for $i from 0 to length($gut-b)  {
+
+            $v : nth($gut-b,$i+1);
+            &.gut-#{$i+1} > *     { padding-left:($v/2); padding-right:($v/2)  }
+         }   
+      }
+
+   }
+}
+
+@mixin make-offset($n)
+{
+   
+   @if (map($set,'options','offset')){  
+       
+      #{$select-row} {
+
+         > *.left#{$n}-0   { margin-left:0  }
+         > *.right#{$n}-0  { margin-right:0 }
+
+         @for $i from 0 to ($set-column - 1) {
+
+            > *.left#{$n}-#{$i+1}  { margin-left:nth($set-col, $i+1)  }
+         }
+
+         @for $i from 0 to ($set-column - 1) {
+
+            > *.right#{$n}-#{$i+1}  { margin-right:nth($set-col, $i+1) }
+         }
+      }
+   }
+}
+
+@mixin make-order( $n:false )
+{
+   @if (map($set,'options','order')){  
+      @for $i from 1 through 20 {
+         #{$select-row} > .order#{$n}-#{$i} { order:#{$i} }
+      }
+   }
+}
+
+@mixin make-space($n)
+{
+   @if (map($set,'options','space')){  
+      @for $i from 0 to length($gut-b ) {
+         
+         $v :nth($gut-b , $i+1);
+
+         #{$select-row}                   {
+            
+            &.gut-#{$i+1}#{$n}            { margin-left:(-$v/2); margin-right:(-$v/2);
+               > *                        { padding-left:($v/2); padding-right:($v/2); padding-bottom:$v }
+               &.c-ob#{$n} > *            { padding-bottom:$v  }
+            }
+         }
+      }
+      
+      @for $i from 0 to length($gut-s ) {
+         
+         $v :nth($gut-s , $i+1);
+         
+         #{$select-row}                   {
+            &.-gut-#{$i+1}#{$n}           { margin-left:(-$v/2); margin-right:(-$v/2);
+               > *                        { padding-left:($v/2); padding-right:($v/2); padding-bottom:$v  }
+               &.c-ob#{$n} > *            { padding-bottom:$v  }
+            }
+         }
+      }
+       
+      #{$select-row}                     {
+         .gut#{$n}                        { margin-left:(-$gut/2); margin-right:(-$gut/2);
+            > *                           { padding-left:($gut/2); padding-right:($gut/2); padding-bottom:$gut  }
+            &.c-ob#{$n} > *               { padding-bottom:$gut  }
+         }
+      }
+   }
+}
+

@@ -1,156 +1,31 @@
 /*
- @ Front-end Developer by Ali Akman (alico) - Flexbox Grid's
- @ https://github.com/thealico/flexboxgrid
- @ http://alico.me  */
+@ Flexbox Grid Version 2.0  - https://github.com/thealico/flexboxgrid
+@ Front-end Developer by Ali Akman (alico) 
+@ http://alico.me  */
 
 @import "set";
+@import "mix";
 
-// .row,[class*="row-"]                    { box-sizing: border-box; display: flex; flex-flow:row wrap; margin-left:(-$gut/2); margin-right: (-$gut/2) } 
-// .col,[class*="col-"]                    { box-sizing: border-box; flex: 0 0 auto; padding-left:($gut/2); padding-right:($gut/2); padding-bottom:$gut }
-// .row.col,.row[class*="col-"]            { margin-left:0;  margin-right:0; padding-left:0; padding-right:0 }
+#{$select-row}                { display: flex; flex-flow:row wrap; box-sizing: border-box; margin-left:(-$gut/2); margin-right: (-$gut/2) } 
+#{$select-col}                { flex: 1 1 0% ; box-sizing: border-box; padding-left:($gut/2); padding-right:($gut/2); padding-bottom:$gut }
+#{$select-colrow}             { margin-left:0; margin-right:0; padding-left:0; padding-right:0 }
 
-[class*="row"]                { box-sizing: border-box; display: flex; flex-flow:row wrap; margin-left:(-$gut/2); margin-right: (-$gut/2) } 
-[class*="col"]                { box-sizing: border-box; flex: 0 0 auto; padding-left:($gut/2); padding-right:($gut/2); padding-bottom:$gut }
+@include make-row-number(null);
+@include make-col-number(null);
+@include make-row-option(null);
+@include make-col-option(null);
+@include make-offset(null);
+@include make-order(null);
+@include make-space(null);
 
-.row[class*="col"]            { margin-left:0;  margin-right:0; padding-left:0; padding-right:0 }
-.col                          { flex: 1 1 0% }
-
-/*  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -   -  -  -  -  -  -  -  -  -  
-@ grid > row */
-
-//[class*="row-"],.row      {
-[class*="row"]              {
-  
-  &.ns                      { margin-left:0; margin-right:0 }
-  &.nsc                     { margin-left:auto; margin-right:auto }
-  &.ns,&.nsc                {
-    > [class*="col"]        { padding-left:0; padding-right:0; padding-bottom:0 } 
-  }
-
-  &.center                  { justify-content: center }
-  &.start                   { justify-content: flex-start }
-  &.between                 { justify-content: space-between }
-  &.around                  { justify-content: space-around }
-  &.end                     { justify-content: flex-end /* align-self: flex-end; margin-left: auto */ }
-
-  &.top                     { align-items: flex-start }
-  &.middle                  { align-items: center }
-  &.bottom                  { align-items: flex-end }
-  &.stretch                 { align-items: stretch }
-  &.baseline                { align-items: baseline }
-  
-  &.direct-x                { flex-direction: row }
-  &.direct-xr               { flex-direction: row-reverse }
-  
-  &.direct-y                { flex-direction: column;  > [class*="col"] { flex-basis: auto }  }
-  &.direct-yr               { flex-direction: column-reverse;  > [class*="col"] { flex-basis: auto }  }
- 
-  
-  &.cp                      { 
-    
-    > *                  { padding-left:($gut/2); padding-right:($gut/2) }
-    @for $i from 0 to length($gut-s ) { 
-      $v : nth($gut-s,$i+1);
-      &.-gut-#{$i+1} > *     { padding-left:($v/2); padding-right:($v/2); }
-    }
-    @for $i from 0 to length($gut-b ) { 
-      $v : nth($gut-b,$i+1);
-      &.gut-#{$i+1} > *     { padding-left:($v/2); padding-right:($v/2); }
-    }
-  }
- 
-  &.c-nb > *                { padding-bottom:0 }
-  
-  &.c-eh > *                { display:flex;
-    > .equal                { width:100%; height:auto; display:block }
-  }
-
-  &.c-nf > *                { flex:none}
- 
+@each $key, $value in $set-screen {
+	@media #{$value} { 
+    	@include make-row-number(-#{$key});
+		@include make-col-number(-#{$key});
+    	@include make-row-option(-#{$key}); 
+    	@include make-col-option(-#{$key}); 
+    	@include make-offset(-#{$key});
+    	@include make-order(-#{$key});
+    	@include make-space(-#{$key});
+   }
 }
-
-/*  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -   -  -  -  -  -  -  -  -  -  
-@ grid > col */
-
-//[class*="col-"],.col {
-[class*="col"]            {
-  
-  &.col-top               { align-self: flex-start }
-  &.col-middle            { align-self: center }
-  &.col-bottom            { align-self: flex-end }
-  &.col-first             { order: -1 }
-  &.col-last              { order: 1 }
-  &.col-ns                { padding-left:0; padding-right:0; padding-bottom:0 }
-  > .equal                { height:100%; display:block }
-}
-
-
-/*  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -   -  -  -  -  -  -  -  -  -  
-@ row @common ( 1 > 12 ) */
-
-
-@include makeGridByNumber(null);
- 
-
-/*  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -   -  -  -  -  -  -  -  -  -  
-@ row @media ( 1 > 12 ) */
-
-@media #{$gl-lg}  { /* LG 1280 */ @include makeGridByNumber(lg-) }
-@media #{$gl-md}  { /* MD 1024 */ @include makeGridByNumber(md-) }
-@media #{$gl-sm}  { /* SM 0768 */ @include makeGridByNumber(sm-) }
-@media #{$gl-xs}  { /* XS 0568 */ @include makeGridByNumber(xs-) }
-@media #{$gl-ms}  { /* MS 360 */ @include makeGridByNumber(ms-) }
-
-
-/*  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -   -  -  -  -  -  -  -  -  -  
-@ row @media items  */
-
-@media #{$gl-lg} { /* LG 1280 */ @include makeRowItems(-lg) }
-@media #{$gl-md} { /* MD 1024 */ @include makeRowItems(-md) }
-@media #{$gl-sm} { /* SM 0768 */ @include makeRowItems(-sm) }
-@media #{$gl-xs} { /* XS 0568 */ @include makeRowItems(-xs) }
-@media #{$gl-ms} { /* MS 0360 */ @include makeRowItems(-ms) }
-
-
-/*  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -   -  -  -  -  -  -  -  -  -  
-@ col @common  */
-
-@include makeCol(null);
-@include makeOff(null);
-
-
-/*  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -   -  -  -  -  -  -  -  -  -  
-@ col @media ( 1 > 12 )  */
-
-@media #{$gl-lg} { /* LG 1280 */ @include makeCol(lg); @include makeOff(-lg) }
-@media #{$gl-md} { /* MD 1024 */ @include makeCol(md); @include makeOff(-md) }
-@media #{$gl-sm} { /* SM 0768 */ @include makeCol(sm); @include makeOff(-sm) }
-@media #{$gl-xs} { /* XS 0568 */ @include makeCol(xs); @include makeOff(-xs) }
-@media #{$gl-ms} { /* MS 0360 */ @include makeCol(ms); @include makeOff(-ms) }
-
-
-/*  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -   -  -  -  -  -  -  -  -  -  
-@ order @common ( 1 > 20 ) */
-
-@include makeOrder();
-
-@media #{$gl-lg} { /* LG 1280 */ @include makeOrder(lg-) }
-@media #{$gl-md} { /* MD 1024 */ @include makeOrder(md-) }
-@media #{$gl-sm} { /* SM 0768 */ @include makeOrder(sm-) }
-@media #{$gl-xs} { /* XS 0568 */ @include makeOrder(xs-) }
-@media #{$gl-ms} { /* MS 0360 */ @include makeOrder(ms-) }
-
-
-/*  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -   -  -  -  -  -  -  -  -  -  
-
-@ space */
-
-@include makeSpace(null);
-
-@media #{$gl-lg} { /* LG 1280 */ @include makeSpace(-lg) }
-@media #{$gl-md} { /* MD 1024 */ @include makeSpace(-md) }
-@media #{$gl-sm} { /* SM 0768 */ @include makeSpace(-sm) }
-@media #{$gl-xs} { /* XS 0568 */ @include makeSpace(-xs) }
-@media #{$gl-ms} { /* MS 0360 */ @include makeSpace(-ms) }
-
-

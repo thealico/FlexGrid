@@ -48,9 +48,7 @@
          &.ns,&.nsc                    {
             > #{$select-colone}        { padding-left:0; padding-right:0; padding-bottom:0 } 
          }
-
-         &.c-nf > *                    { flex:none }
-         
+ 
          &.c-eh > *                    { 
             > *                        { height: 100%;  width: 100%; display: block  }
          }
@@ -66,15 +64,14 @@
 {
 
    #{$select-row}                      {
-
       
       .tc#{$n}-top                     { align-self: flex-start }
       .tc#{$n}-middle                  { align-self: center }
       .tc#{$n}-bottom                  { align-self: flex-end }
       .tc#{$n}-first                   { order: -1 }
       .tc#{$n}-last                    { order: 1 }
-      .tc#{$n}-ob                      { padding-bottom:$gut }
       .tc#{$n}-ns                      { padding-left:0; padding-right: 0; padding-bottom: 0 }
+      .tc#{$n}-ob                      { padding-bottom:$gut }
       .tc#{$n}-nb                      { padding-bottom:0 }
 
       @for $i from 0 to length($gut-b) { 
@@ -84,11 +81,6 @@
       @for $i from 0 to length($gut-s) { 
          &.-gut-#{$i+1} .tc#{$n}-ob    { padding-bottom:nth($gut-s,$i+1) }
       }
-
-      @if not $n                     { 
-         > .equal                    { height:100%; display:block }
-      }
-
    }
 }
 
@@ -112,7 +104,6 @@
             &.gut-#{$i+1} > *     { padding-left:($v/2); padding-right:($v/2)  }
          }   
       }
-
    }
 }
 
@@ -176,7 +167,7 @@
          }
       }
        
-      #{$select-row}                     {
+      #{$select-row}                      {
          .gut#{$n}                        { margin-left:(-$gut/2); margin-right:(-$gut/2);
             > *                           { padding-left:($gut/2); padding-right:($gut/2); padding-bottom:$gut  }
             &.c-ob#{$n} > *               { padding-bottom:$gut  }

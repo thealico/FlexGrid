@@ -1,0 +1,886 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Flexbox Grid Sistem</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/example.css">
+    <link rel="stylesheet" href="../dist/grid.min.css">
+</head>
+
+    <body>
+        <header>
+            <div class="con">
+                <div>
+                    <h1>Flexbox<span>Grid</span></h1>
+                    <a href="https://github.com/thealico/flexboxgrid" target="_blank">SASS Download</a>
+                </div>
+            </div>
+        </header>
+        <div class="con doc">
+                  
+            <section id="01">
+    <h5 class="no"><span>01<s class="sol"></s><s class="sag"></s></span></h5>
+    <div class="dsc">
+        <h4>Eşit Sütunlar</h4>
+        <p>herhangi bir kosul tanımlanmayan (.row) satırı altındaki (.col) sütunlarımız sütun sayısınca eşit bölünür</p>
+
+    </div>
+    
+    <div class="sam">
+        
+        <div class="row">
+            <div class="col"><span>A</span></div>
+            <div class="col"><span>B</span></div>
+            <div class="col"><span>C</span></div>
+        </div>
+
+        <div class="row">
+            <div class="col"><span>A</span></div>
+            <div class="col"><span>B</span></div>
+            <div class="col"><span>C</span></div>
+            <div class="col"><span>D</span></div>
+            <div class="col"><span>E</span></div>
+            <div class="col"><span>F</span></div>
+        </div>
+            
+    </div>
+
+<div class="cod"><i></i><pre><code class="html">&lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;col&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;col&quot;&gt;&lt;/div&gt;
+ &lt;/div&gt;</code></pre></div>
+          
+</section>             <section id="02">
+<h5 class="no"><span>02<s class="sol"></s><s class="sag"></s></span></h5>
+<div class="dsc">
+    <h4>Satırdan Sütun Böl</h4>
+    <p>satırımızdaki row etiketine (-) ekler sütunlarımız bölmek istediğimiz 1 ile 12 arasındaki değer gireriz</p>
+</div>
+
+<div class="sam">
+    
+    <div class="row-4">
+        <div class="col"><span>A</span></div>
+        <div class="col"><span>B</span></div>
+        <div class="col"><span>C</span></div>
+        <div class="col"><span>D</span></div>
+    </div>
+
+</div>
+
+<div class="cod"><i></i><pre><code class="html">&lt;div class=&quot;row-4&quot;&gt;
+    &lt;div class=&quot;col&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;col&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;col&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;col&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre></div>
+
+             
+</section>             <section id="03">
+<h5 class="no"><span>03<s class="sol"></s><s class="sag"></s></span></h5>
+    <div class="dsc">
+        <h4>Satırdan Ekran Şartı</h4>
+        <p>xs, sm, md, lg ekran oranları ile satırdan sütunü bölümlerini ekrana göre kolayca değişebilirsin</p>
+    </div>
+
+    <div class="sam">
+        
+        <div class="row-3 row-sm-2 row-xs-1">
+            <div class="col"><span>A</span></div>
+            <div class="col"><span>B</span></div>
+            <div class="col"><span>C</span></div>
+            <div class="col"><span>D</span></div>
+            <div class="col"><span>E</span></div>
+        </div>
+         
+    </div>
+<div class="cod"><i></i><pre><code class="html">&lt;div class=&quot;row-3 row-sm-2 row-xs-1&quot;&gt;
+    &lt;div class=&quot;col&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;col&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;col&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;col&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;col&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre></div>
+
+</section>
+             <section id="04">
+<h5 class="no"><span>05<s class="sol"></s><s class="sag"></s></span></h5>
+    <div class="dsc">
+        <h4>Sütunun Tebiri Satırın Takdirini Bozar</h4>
+        <p>satırın sütuna verdiği takdirin ömrü sütunun kendine verdiği hükme kadardır</p>
+    </div>
+
+    <div class="sam">
+        
+        <div class="row-4">
+            <div class="col-6"><span>A COL-6</span></div>
+            <div class="col"><span>B</span></div>
+            <div class="col"><span>C</span></div>
+        </div>
+         
+    </div>
+<div class="cod"><i></i><pre><code class="html">&lt;div class=&quot;row-4&quot;&gt;
+    &lt;div class=&quot;col-6&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;col&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;col&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre></div>
+
+    <div class="sam">
+        
+        <div class="row">
+            <div class="col"><span>A / Auto</span></div>
+            <div class="col-2"><span>B</span></div>
+            <div class="col-6"><span>C</span></div>
+        </div>
+         
+    </div>
+<div class="cod"><i></i><pre><code class="html">&lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;col-2&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;col-6&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre></div>
+</section>
+             <section id="05">
+<h5 class="no"><span>05<s class="sol"></s><s class="sag"></s></span></h5>
+    <div class="dsc">
+        <h4>Safları Sıklaştırın</h4>
+        <p>no-space/ns etikiyle sutunlarımızın saf aralıklarını kapayabiliriz</p>
+    </div>
+
+    <div class="sam s_05">
+        
+        <div class="row ns">
+            <div class="col"><span>A</span></div>
+            <div class="col"><span>B</span></div>
+            <div class="col"><span>C</span></div>
+            <div class="col"><span>D</span></div>
+            <div class="col"><span>E</span></div>
+        </div>
+         
+    </div>
+<div class="cod"><i></i><pre><code class="html">&lt;div class=&quot;row ns&quot;&gt;
+    &lt;div class=&quot;col&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;col&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;col&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;col&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;col&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre></div>
+</section>
+             <section id="06">
+<h5 class="no"><span>06<s class="sol"></s><s class="sag"></s></span></h5>
+    <div class="dsc">
+        <h4>Matruşka Grid</h4>
+        <p>sutunların içinde yeni satırlar onların içinden de yeni sütunlar doğurmak mı ? evet buda mümkün</p>
+    </div>
+
+    <div class="sam">
+        
+        <div class="row">
+            <div class="col-4"><span>A</span></div>
+            <div class="col-2 col-xs-8"><span>B</span></div>
+            <div class="col-6 col-xs-12 row">
+                
+                <div class="col-6"><span>C.1</span></div>
+                <div class="col-6"><span>C.2</span></div>
+                
+                <div class="col-4"><span>C.3</span></div>
+                <div class="col-4"><span>C.4</span></div>
+                <div class="col-4"><span>C.5</span></div>
+                       
+            </div>
+        </div>
+         
+    </div>
+<div class="cod"><i></i><pre><code class="html">&lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col-4&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;col-2 col-xs-8&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;col-6 col-xs-12 row&quot;&gt;
+        
+        &lt;div class=&quot;col-6&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;col-6&quot;&gt;&lt;/div&gt;
+        
+        &lt;div class=&quot;col-4&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;col-4&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;col-4&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre></div>
+</section>
+             <section id="07">
+<h5 class="no"><span>07<s class="sol"></s><s class="sag"></s></span></h5>
+    <div class="dsc">
+        <h4>Yatay Hizalama</h4>
+        <p>satır içindeki sutunları sağ sol ve merkez hizalamaları</p>
+    </div>
+
+    <div class="sam">
+        
+        <div class="row">
+            <div class="col col-4"><span>A</span></div>
+        </div>
+        <div class="row center">
+            <div class="col col-4"><span>B</span></div>
+        </div>
+        <div class="row end">
+            <div class="col col-4"><span>C</span></div>
+        </div>
+         
+    </div>
+
+<div class="cod"><i></i><pre><code class="html">&lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col col-2&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;row center&quot;&gt;
+    &lt;div class=&quot;col col-2&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;row end&quot;&gt;
+    &lt;div class=&quot;col col-2&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre></div>
+<div class="dsc ara">
+    <hr/>
+    <p><span>Ekran Aralığı Desteği Var</span></p>
+</div>
+
+<div class="sam">
+    <div class="row end-sm center-xs">
+        <div class="col col-5"><span>A</span></div>
+   </div>
+ </div>
+
+<div class="cod"><i></i><pre><code class="html"> &lt;div class=&quot;row center end-sm center-xs&quot;&gt;
+    &lt;div class=&quot;col col-5&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre></div>
+
+</section>
+
+
+             <section id="08">
+<h5 class="no"><span>08<s class="sol"></s><s class="sag"></s></span></h5>
+    <div class="dsc">
+        <h4>Dikey Hizalama</h4>
+        <p>satır içindeki sutunları üst orta ve alt hizalamaları varsayılan (top) değeri üstten başlar</p>
+    </div>
+
+     <div class="sam s_08_1">
+         <div class="row c-nb middle">
+            <div class="col a"><span>A</span></div>
+            <div class="col b"><span>B</span></div>
+            <div class="col c"><span>C</span></div>
+        </div>
+    </div>
+
+
+<div class="cod"><i></i><pre><code class="html">&lt;div class=&quot;row middle&quot;&gt;
+    &lt;div class=&quot;col&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;col&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;col&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre></div>
+
+    <span id="08.1"></span>
+    <div class="dsc ara">
+        <hr/>
+        <p><span> Alta Yaslı Sütunlar</span></p>
+    </div>
+    
+    <div class="sam s_08_1">
+         <div class="row c-nb bottom">
+            <div class="col a"><span>A</span></div>
+            <div class="col b"><span>B</span></div>
+            <div class="col c"><span>C</span></div>
+        </div>
+    </div>
+
+<div class="cod"><i></i><pre><code class="html">&lt;div class=&quot;row bottom&quot;&gt;
+    &lt;div class=&quot;col&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;col&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;col&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre></div> 
+
+    <div class="dsc ara">
+        <hr/>
+        <p><span> Satır Kasası Yükseliğine Görede Çalışır</span></p>
+    </div>
+
+     <div class="sam s_08">
+        
+        <div class="row c-nb middle">
+            <div class="col"><span>A</span></div>
+            <div class="col"><span>B</span></div>
+            <div class="col"><span>C</span></div>
+        </div>
+         
+    </div>
+     <span id="08.3"></span>
+    <div class="dsc ara">
+        <hr/>
+        <p><span> Ekran Aralığı Desteği Var</span></p>
+    </div>
+
+    <div class="sam s_08_1">
+        
+        <div class="row middle bottom-xs">
+            <div class="col a"><span>A</span></div>
+            <div class="col b"><span>B</span></div>
+            <div class="col c"><span>C</span></div>
+        </div>
+         
+    </div>
+
+<div class="cod"><i></i><pre><code class="html">&lt;div class=&quot;row middle bottom-xs&quot;&gt;
+    &lt;div class=&quot;col&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;col&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;col&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre></div> 
+<span id="08.4"></span>
+    <div class="dsc ara">
+        <hr/>
+        <p><span> Sutunlar Bağımsız Olarak Pozisyonlarını Değişebilir</span></p>
+    </div>
+
+    <div class="sam s_08_1">
+        
+        <div class="row middle">
+            <div class="col tc-top a"><span>A</span></div>
+            <div class="col b"><span>B</span></div>
+            <div class="col c"><span>C</span></div>
+            <div class="col tc-bottom d"><span>D</span></div>
+        </div>
+         
+    </div>
+
+<div class="cod"><i></i><pre><code class="html">&lt;div class=&quot;row middle&quot;&gt;
+    &lt;div class=&quot;col tc-top &quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;col&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;col&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;col tc-bottom&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre></div> 
+
+
+
+
+</section>
+             <section id="09">
+    
+    <h5 class="no"><span>09<s class="sol"></s><s class="sag"></s></span></h5>
+
+    <div class="dsc">
+        <h4>Sıralama Yönleri</h4>
+        <p>sütunlarımızın sıralamasını terse çevirmek için reserve etiketi atıyoruz</p>
+    </div>
+
+    <div class="sam">
+        
+        <div class="row">
+            <div class="col"><span>A</span></div>
+            <div class="col"><span>B</span></div>
+            <div class="col"><span>C</span></div>
+        </div>
+        
+        <div class="kesme">
+            <p><b>After<s class="sol"></s><s class="sag"></s></b></p>
+        </div>
+
+        <div class="row direct-xr">
+            <div class="col"><span>A</span></div>
+            <div class="col"><span>B</span></div>
+            <div class="col"><span>C</span></div>
+        </div>
+         
+    </div>
+<div class="cod"><i></i><pre><code class="html">&lt;div class=&quot;row direct-xr&quot;&gt;
+    &lt;div class=&quot;col&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;col&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;col&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre></div>
+<span id="09.1"></span>
+<div class="dsc ara" >
+    <hr />
+    <p><span>Dikey Format</span></p>
+</div>
+
+
+<div class="sam">
+    
+    <div class="row direct-y">
+        <div class="col"><span>A</span></div>
+        <div class="col"><span>B</span></div>
+        <div class="col"><span>C</span></div>
+    </div>
+     
+</div>
+
+<div class="cod"><i></i><pre><code class="html">&lt;div class=&quot;row direct-y&quot;&quot;&gt;
+    &lt;div class=&quot;col&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;col&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;col&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre></div>
+<span id="09.2"></span>
+<div class="dsc ara">
+    <hr/>
+    <p><span>Ekran Aralığı Desteği Var</span></p>
+</div>
+
+<div class="sam">
+    
+    <div class="row direct-y-xs">
+        <div class="col"><span>A</span></div>
+        <div class="col"><span>B</span></div>
+        <div class="col"><span>C</span></div>
+    </div>
+     
+</div>
+
+<div class="cod"><i></i><pre><code class="html">&lt;div class=&quot;row direct-y-xs&quot;&gt;
+    &lt;div class=&quot;col&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;col&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;col&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre></div>
+
+</section>
+            <section id="10">
+    <h5 class="no"><span>10<s class="sol"></s><s class="sag"></s></span></h5>
+    <div class="dsc">
+        <h4>Sütun Sıralama</h4>
+        <p>firt ve last etiketleri değişim yapabilirsiniz</p>
+    </div>
+
+    <div class="sam">
+        
+        <div class="row">
+            <div class="col"><span>A</span></div>
+            <div class="col"><span>B</span></div>
+            <div class="col tc-first"><span>C</span></div>
+        </div>
+         
+         <div class="row">
+            <div class="col"><span>A</span></div>
+            <div class="col  tc-last"><span>B</span></div>
+            <div class="col"><span>C</span></div>
+        </div>
+    </div>
+
+<div class="cod"><i></i><pre><code class="html">&lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col&quot;&gt;A&lt;/div&gt;
+    &lt;div class=&quot;col&quot;&gt;B&lt;/div&gt;
+    &lt;div class=&quot;col tc-first&quot;&gt;C&lt;/div&gt;
+&lt;/div&gt;
+ 
+&lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col&quot;&gt;A&lt;/div&gt;
+    &lt;div class=&quot;col  tc-last&quot;&gt;B&lt;/div&gt;
+    &lt;div class=&quot;col&quot;&gt;C&lt;/div&gt;
+&lt;/div&gt;</code></pre></div>
+<span id="10.1"></span>
+<div class="dsc ara">
+    <hr/>
+    <p><span>Order ile Sıra Değiştir 10'a kadar destekler</span></p>
+</div>
+
+<div class="sam">
+    
+    <div class="row">
+        <div class="col order-4"><span>A 01</span></div>
+        <div class="col order-3"><span>B 02</span></div>
+        <div class="col order-1"><span>C 03</span></div>
+        <div class="col order-2"><span>D 04</span></div>
+    </div>
+     
+</div>
+
+<div class="cod"><i></i><pre><code class="html">&lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col order-4&quot;&gt; A 01 &lt;/div&gt;
+    &lt;div class=&quot;col order-3&quot;&gt; B 02 &lt;/div&gt;
+    &lt;div class=&quot;col order-1&quot;&gt; C 03 &lt;/div&gt;
+    &lt;div class=&quot;col order-2&quot;&gt; D 04 &lt;/div&gt;
+&lt;/div&gt;</code></pre></div>
+
+<span id="10.2"></span>
+<div class="dsc ara">
+    <hr/>
+    <p><span>Ekrana göre formatlama destekler</span></p>
+</div>
+
+<div class="sam">
+    
+    <div class="row">
+        <div class="col order-4 order-xs-1"><span>A 01</span></div>
+        <div class="col order-3"><span>B 02</span></div>
+        <div class="col order-1 order-xs-4"><span>C 03</span></div>
+        <div class="col order-2"><span>D 04</span></div>
+    </div>
+     
+</div>
+
+<div class="cod"><i></i><pre><code class="html">&lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col order-4 order-xs-1&quot;&gt; A 01 &lt;/div&gt;
+    &lt;div class=&quot;col order-3&quot;&gt; B 02 &lt;/div&gt;
+    &lt;div class=&quot;col order-1 order-xs-4&quot;&gt; C 03 &lt;/div&gt;
+    &lt;div class=&quot;col order-2&quot;&gt; D 04 &lt;/div&gt;
+&lt;/div&gt;</code></pre></div>
+
+
+</section>
+             <section id="11">
+    <h5 class="no"><span>11<s class="sol"></s><s class="sag"></s></span></h5>
+    <div class="dsc">
+        <h4>Between Dağılımı</h4>
+        <p>sütunlar birbirlerinde ortanlı olarak ayrılarak tüm kasaya yayılı </p>
+    </div>
+
+    <div class="sam">
+        
+        <div class="row between">
+            <div class="col-2"><span>A</span></div>
+            <div class="col-2"><span>A</span></div>
+            <div class="col-2"><span>A</span></div>
+            <div class="col-2"><span>A</span></div>
+        </div>
+         
+    </div>
+<div class="cod"><i></i><pre><code class="html">&lt;div class=&quot;row between&quot;&gt;
+    &lt;div class=&quot;col-2&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;col-2&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;col-2&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;col-2&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre></div>
+</section>
+             <section id="12">
+    <h5 class="no"><span>12<s class="sol"></s><s class="sag"></s></span></h5>
+    <div class="dsc">
+        <h4>Around Dağılımı</h4>
+        <p>sütunlar merkezde toplanarak birbirlerinde ortanlı olarak ayrılır</p>
+    </div>
+
+    <div class="sam">
+        
+        <div class="row around">
+            <div class="col-2"><span>A</span></div>
+            <div class="col-2"><span>B</span></div>
+            <div class="col-2"><span>C</span></div>
+        </div>
+         
+    </div>
+<div class="cod"><i></i><pre><code class="html">&lt;div class=&quot;row around&quot;&gt;
+    &lt;div class=&quot;col-3&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;col-3&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;col-3&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre></div>
+</section>
+             <section id="13">
+    <h5 class="no"><span>13<s class="sol"></s><s class="sag"></s></span></h5>
+    <div class="dsc">
+        <h4>Center Dağılım</h4>
+        <p>sütunlar merkezde kalacak şekilde ortalanır</p>
+    </div>
+
+    <div class="sam">
+        
+        <div class="row center">
+            <div class="col-2"><span>A</span></div>
+            <div class="col-2"><span>B</span></div>
+            <div class="col-2"><span>C</span></div>
+        </div>
+         
+    </div>
+<div class="cod"><i></i><pre><code class="html">&lt;div class=&quot;row center&quot;&gt;
+    &lt;div class=&quot;col-2&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;col-2&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;col-2&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre></div>
+</section>
+             <section id="14">
+    <h5 class="no"><span>14<s class="sol"></s><s class="sag"></s></span></h5>
+    <div class="dsc">
+        <h4>Offset Öteleme</h4>
+        <p>left yada right yönünde sütunları öteleyebiliriz</p>
+    </div>
+
+    <div class="sam">
+        
+        
+        <div class="row center">
+            <div class="col-1 left-5 right-5"><span>A</span></div>
+            <div class="col-2 left-5 right-5"><span>B</span></div>
+            <div class="col-3 left-4 right-4"><span>C</span></div>
+        </div>
+
+         
+    </div>
+<div class="cod"><i></i><pre><code class="html">&lt;div class=&quot;row center&quot;&gt;
+    &lt;div class=&quot;col-1 left-5 right-5&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;col-2 left-5 right-5&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;col-3 left-4 right-4&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre></div>
+
+
+<div class="dsc ara">
+    <hr/>
+    <p><span>Farklı Örnekler</span></p>
+</div>
+
+<div class="sam">
+    <div class="row">
+        <div class="col-2 right-10"><span>A</span></div>
+        <div class="col-4 right-8"><span>B</span></div>
+    </div>
+
+    <div class="row">
+        <div class="col-2 left-10"><span>A</span></div>
+        <div class="col-4 left-8"><span>B</span></div>
+    </div>
+</div>
+
+<div class="cod"><i></i><pre><code class="html">&lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col-2 right-10&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;col-4 right-8&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col-2 left-10&quot;&gt;/div&gt;
+    &lt;div class=&quot;col-4 left-8&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre></div>
+
+<div class="dsc ara">
+    <hr/>
+    <p><span>Ekran Aralığı Desteği Var</span></p>
+</div>
+
+<div class="sam">
+    <div class="row">
+        <div class="col-2 right-5 right-xs-7"><span>A</span></div>
+        <div class="col-4 col-sm-6 left-3 left-sm-5"><span>B</span></div>
+    </div>
+</div>
+
+<div class="cod"><i></i><pre><code class="html">&lt;div class=&quot;sam&quot;&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;col-2 right-5 right-xs-7&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;col-4 col-sm-6 left-3 left-sm-5&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre></div>
+</section>
+             <section id="15">
+    <h5 class="no"><span>15<s class="sol"></s><s class="sag"></s></span></h5>
+    <div class="dsc">
+        <h4>Sütun Alt Boşluk Sıfırlama</h4>
+        <p>c-nb( col no bottom ) etiketi ile row'un sütunlarının padding-bottom  aralığını iptal eder</p>
+    </div>
+
+    <div class="sam s_15">
+        <div class="row c-nb">
+            <div class="col"><span>A</span></div>
+            <div class="col"><span>B</span></div>
+            <div class="col"><span>C</span></div>
+        </div>
+    </div>
+
+<div class="cod"><i></i><pre><code class="html">&lt;div class=&quot;row c-nb&quot;&gt;
+    &lt;div class=&quot;col&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;col&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;col&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre></div>
+
+<span id="15.1"></span>
+<div class="dsc ara">
+    <hr/>
+    <p><span>c-ob (child on-bottom) etiketi ile istediğimiz grid modunda aktif edebilme desteği vardır</span></p>
+</div>
+
+<div class="sam s_15">
+    <div class="row c-nb c-ob-sm direct-y-sm">
+        <div class="col"><span>A</span></div>
+        <div class="col"><span>B</span></div>
+        <div class="col"><span>C</span></div>
+    </div>
+</div>
+
+<div class="cod"><i></i><pre><code class="html">&lt;div class=&quot;row c-nb c-ob-sm direct-y-sm&quot;&gt;
+    &lt;div class=&quot;col&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;col&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;col&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre></div>
+
+
+<span id="15.2"></span>
+<div class="dsc ara">
+    <hr/>
+    <p><span>tc-nb (this col no-bottom) etiketi ile  istediğiniz col'un bottom gutter'ı kaldırır</span></p>
+</div>
+
+<div class="sam s_15">
+    <div class="row bottom">
+        <div class="col"><span>A</span></div>
+        <div class="col tc-nb"><span>B</span></div>
+        <div class="col"><span>C</span></div>
+    </div>
+</div>
+
+<div class="cod"><i></i><pre><code class="html">&lt;div class=&quot;row bottom&quot;&gt;
+    &lt;div class=&quot;col&quot;&gt;&lt;span&gt;A&lt;/span&gt;&lt;/div&gt;
+    &lt;div class=&quot;col tc-nb&quot;&gt;&lt;span&gt;B&lt;/span&gt;&lt;/div&gt;
+    &lt;div class=&quot;col&quot;&gt;&lt;span&gt;C&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre></div>
+
+
+<span id="15.3"></span>
+<div class="dsc ara">
+    <hr/>
+    <p><span>tc-ns (this col no-space) etiketi ile istediğimiz col'un tüm gutter boşluklarını kaldırır</span></p>
+</div>
+
+<div class="sam s_15">
+    <div class="row bottom">
+        <div class="col"><span>A</span></div>
+        <div class="col tc-ns"><span>B</span></div>
+        <div class="col"><span>C</span></div>
+    </div>
+</div>
+
+<div class="cod"><i></i><pre><code class="html">&lt;div class=&quot;row bottom&quot;&gt;
+    &lt;div class=&quot;col&quot;&gt;&lt;span&gt;A&lt;/span&gt;&lt;/div&gt;
+    &lt;div class=&quot;col tc-ns&quot;&gt;&lt;span&gt;B&lt;/span&gt;&lt;/div&gt;
+    &lt;div class=&quot;col&quot;&gt;&lt;span&gt;C&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre></div>
+
+
+</section>
+             <section id="16">
+    <h5 class="no"><span>16<s class="sol"></s><s class="sag"></s></span></h5>
+    <div class="dsc">
+        <h4>Eşit Yükseklik</h4>
+        <p>Eğer chrome dışındaki bir tarayıcıdan bakıyorsanız aşağıdaki örnekteki a ve b sütunlarının aynı yüksekliğie eşitlendiğini görürsünüz. Bunun için sütün (col) içindeki ilk içerik kasasının height:100% değeri alması kafidir. Chrome'da çalışacak şekile daha uyumlu yapmak istersek bir alttaki örneğe bakınız.</p>
+    </div>
+
+    <div class="sam s_16_1">
+        
+        <div class="row">
+            <div class="col"><span class="equal a">A (180 PX)</span></div>
+            <div class="col"><span class="equal">B</span></div>
+        </div>
+         
+    </div>
+<div class="cod"><i></i><pre><code class="html">&lt;div class=&quot;row&quot;&gt;
+&lt;div class=&quot;col&quot;&gt;&lt;span class=&quot;equal&quot;&gt;&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;col&quot;&gt;&lt;span class=&quot;equal&quot;&gt;&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre></div>
+
+
+<div class="dsc ara">
+    <hr/>
+    <p><span>c-eh (child equal height) ile sütun (.col) içindeki kapsayıcı kasanın yüksekliklerini chrome bug' nı da atlatarak eşitlemiş oluruz. Bu teknikte sütunlar (col) flex özelliği alır bunan ötürü sütunun içindeki ilk content: width:100% vermelyiz !</span></p>
+</div>
+
+<div class="sam s_16_2">
+    <div class="row c-eh">
+        <div class="col"><span class="equal a">A (180 PX)</span></div>
+        <div class="col"><span class="equal">B</span></div>
+    </div>
+</div>
+
+<div class="cod"><i></i><pre><code class="html">&lt;div class=&quot;row c-eh&quot;&gt;
+    &lt;div class=&quot;col&quot;&gt;&lt;span class=&quot;class=&quot;equal&quot;&quot;&gt;&lt;/span&gt;&lt;/div&gt;
+    &lt;div class=&quot;col&quot;&gt;&lt;span class=&quot;class=&quot;equal&quot;&quot;&gt;&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre></div>
+
+</section>
+             <section id="17">
+    <h5 class="no"><span>17<s class="sol"></s><s class="sag"></s></span></h5>
+    <div class="dsc">
+        <h4>Aralık Ölçüleri</h4>
+        <p>Block boşluk aralıkları ( -gut ) ile küçültür ( gut ) ilede büyütülür.</p>
+    </div>
+
+    <div class="sam">
+        <div class="row c-nb center">
+            <div class="col-6 col-sm-12">
+                <div class="row">
+                    <div class="col"><span>Default</span></div>
+                    <div class="col"><span>Default</span></div>
+                </div>
+               <div class="row -gut-1">
+                    <div class="col"><span>-gut-1</span></div>
+                    <div class="col"><span>-gut-1</span></div>
+                </div>
+                <div class="row -gut-2">
+                    <div class="col"><span>-gut-2</span></div>
+                    <div class="col"><span>-gut-2</span></div>
+                </div>
+                
+            </div>
+           
+        </div>
+         
+    </div>
+
+<div class="cod"><i></i><pre><code class="html">&lt;div class=&quot;row -gut-1&quot;&gt;
+    &lt;div class=&quot;col&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;col&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre></div>
+
+
+<div class="dsc ara">
+    <hr/>
+    <p><span>gut büyük aralık örneği</span></p>
+</div>
+
+<div class="sam">
+    <div class="row c-nb center">
+            <div class="col-6 col-sm-12">
+                <div class="row ">
+                    <div class="col"><span>Default</span></div>
+                    <div class="col"><span>Default</span></div>
+                </div>
+                 <div class="row  gut-1">
+                    <div class="col"><span>gut-1</span></div>
+                    <div class="col"><span>gut-1</span></div>
+                </div>
+                 <div class="row  gut-2">
+                    <div class="col"><span>gut-2</span></div>
+                    <div class="col"><span>gut-2</span></div>
+                </div>
+              
+                
+            </div>
+           
+        </div>
+</div>
+
+<div class="cod"><i></i><pre><code class="html">&lt;div class=&quot;row gut-1&quot;&gt;
+    &lt;div class=&quot;col&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;col&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre></div>
+
+<div class="dsc ara">
+    <hr/>
+    <p><span>ekrana göre yeniden formatlanabilir</span></p>
+</div>
+
+<div class="sam">
+    <div class="row c-nb center">
+       
+            <div class="col-6 col-sm-12">
+                <div class="row c-nb  gut-2 -gut-1-xs">
+                    <div class="col"><span>A</span></div>
+                    <div class="col"><span>B</span></div>
+                </div>
+            </div>
+          
+        </div>
+</div>
+
+<div class="cod"><i></i><pre><code class="html"> &lt;div class=&quot;row gut-2 -gut-1-xs&quot;&gt;
+    &lt;div class=&quot;col&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;col&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre></div>
+
+</section>
+            
+            
+        </div>
+
+
+    </body>
+
+</html>

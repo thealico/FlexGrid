@@ -46,6 +46,13 @@ header a:hover	{ color:#ff4106}
 .doc section h5.no s.sol 	{ left: -40px }
 .doc section h5.no s.sag 	{ right: -40px }
 
+.row.color > *:nth-child(2) span 	{ background: #c270d6 }
+.row.color > *:nth-child(3) span	{ background: #817ee6 }
+.row.color > *:nth-child(4) span	{ background: #f16868 }
+.row.color > *:nth-child(5) span	{ background: #4ec177 }
+.row.color > *:nth-child(6) span	{ background: #e86159 }
+.row  > .color-a span	{ background: #c270d6 }
+.row  > .color-b span	{ background: #e86159 }
 
 .doc .cod  > i { width: 0;
 height: 0;
@@ -73,6 +80,8 @@ top: -9px
 
 .s_16_1 .col span.a { height:180px;}
 .s_16_2 .col span.a { height:180px;}
+
+.s_17_1 .w .in { background: white; padding: 10px;  }
 
 @media (max-width: 640px) {
 

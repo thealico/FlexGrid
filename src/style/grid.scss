@@ -6,28 +6,30 @@
 @import "set";
 @import "mix";
 
-#{$select-row}                { display: flex; flex-flow:row wrap; box-sizing: border-box; margin-left:(-$gut/2); margin-right: (-$gut/2) } 
-#{$select-col}		      { flex: 1 1 0% ; box-sizing: border-box; padding-left:($gut/2); padding-right:($gut/2); padding-bottom:$gut }
-#{$select-col-}     	      { flex:none }
-#{$select-colcol}             { flex: 1 1 0% }
-#{$select-colrow}             { margin-left:0; margin-right:0; padding-left:0; padding-right:0 }
+#{$select-row}           	{ display: flex; flex-flow:row wrap; box-sizing: border-box; margin-left:(-$gut/2); margin-right: (-$gut/2) } 
+#{$select-col}		      	{ flex: 1 1 0% ; box-sizing: border-box; padding-left:($gut/2); padding-right:($gut/2); padding-bottom:$gut }
+#{$select-col-}     	    { flex:none }
+#{$select-colcol}           { flex: 1 1 0% }
+#{$select-colrow}           { margin-left:0; margin-right:0; padding-left:0; padding-right:0 }
+
 
 @include make-row-number(null);
 @include make-col-number(null);
+@include make-space(null);
 @include make-row-option(null);
 @include make-col-option(null);
 @include make-offset(null);
 @include make-order(null);
-@include make-space(null);
+
 
 @each $key, $value in $set-screen {
 	@media #{$value}{ 
 		@include make-row-number(-#{$key});
 		@include make-col-number(-#{$key});
+		@include make-space(-#{$key});
 		@include make-row-option(-#{$key}); 
 		@include make-col-option(-#{$key}); 
 		@include make-offset(-#{$key});
 		@include make-order(-#{$key});
-		@include make-space(-#{$key});
 	}
 }

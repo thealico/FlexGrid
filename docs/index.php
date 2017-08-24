@@ -2,17 +2,17 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Flexbox Grid Sistem</title>
+    <title>FlexGrid Sistem</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/example.css">
-    <link rel="stylesheet" href="../dist/grid.min.css">
+    <link rel="stylesheet" href="../dist/grid.css">
 </head>
 
     <body>
         <header>
             <div class="con">
                 <div>
-                    <h1>Flexbox<span>Grid</span></h1>
+                    <h1>Flex<span>Grid</span></h1>
                     <a href="https://github.com/thealico/flexboxgrid" target="_blank">SASS Download</a>
                 </div>
             </div>

@@ -7,13 +7,13 @@ Grid’in sütün sayısı (column), sütün aralıkları (gutter), ekran aralı
 ### Row
 Satırın refrans aldığı etiketler aşağıda gibidir. Canlı örneklerini görmek için etiket linklerine tıklayın.
 
-* [center](https://thealico.github.io/flexboxgrid/example/#07)     **(-)** Sütunları yatayada ortalar
-* [start](https://thealico.github.io/flexboxgrid/example/#07)      **(-)** Sütünları sola yaslı sıralar 
-* [between](https://thealico.github.io/flexboxgrid/example/#11)    **(-)** Sütünları sol ve sağa doğru sonlandırarak sıralar 
-* [around](https://thealico.github.io/flexboxgrid/example/#12)     **(-)** Sütunları merkeden ortalayarak sağa ve sola doğru sıralar 
-* [end](https://thealico.github.io/flexboxgrid/example/#07)        **(-)** Sütunları sağa doğru yaslıyarak sıralar
-* [middle](https://thealico.github.io/flexboxgrid/example/#08)     **(-)** Sütünları dikeyde rtalar
-* [bottom](https://thealico.github.io/flexboxgrid/example/#08)     **(-)** Sütunları alta yaslar
+* [center](https://thealico.github.io/flexboxgrid/example/#07)     - *Sütunları yatayada ortalar*
+* [start](https://thealico.github.io/flexboxgrid/example/#07)      - *Sütünları sola yaslı sıralar *
+* [between](https://thealico.github.io/flexboxgrid/example/#11)    - *Sütünları sol ve sağa doğru sonlandırarak sıralar*
+* [around](https://thealico.github.io/flexboxgrid/example/#12)     - *Sütunları merkeden ortalayarak sağa ve sola doğru sıralar* 
+* [end](https://thealico.github.io/flexboxgrid/example/#07)        - *Sütunları sağa doğru yaslıyarak sıralar*
+* [middle](https://thealico.github.io/flexboxgrid/example/#08)     - *Sütünları dikeyde rtalar*
+* [bottom](https://thealico.github.io/flexboxgrid/example/#08)     - *Sütunları alta yaslar*
 * top                
 * stretch            
 * baseline           

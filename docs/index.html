@@ -1,19 +1,18 @@
-
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Flexbox Grid Sistem</title>
+    <title>FlexGrid Sistem</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/example.css">
-    <link rel="stylesheet" href="../dist/grid.min.css">
+    <link rel="stylesheet" href="../dist/grid.css">
 </head>
 
     <body>
         <header>
             <div class="con">
                 <div>
-                    <h1>Flexbox<span>Grid</span></h1>
+                    <h1>Flex<span>Grid</span></h1>
                     <a href="https://github.com/thealico/flexboxgrid" target="_blank">SASS Download</a>
                 </div>
             </div>
@@ -67,15 +66,23 @@
         <div class="col"><span>B</span></div>
         <div class="col"><span>C</span></div>
         <div class="col"><span>D</span></div>
+        <div class="col"><span>E</span></div>
+        <div class="col"><span>F</span></div>
+        <div class="col"><span>G</span></div>
+        <div class="col"><span>E</span></div>
     </div>
 
 </div>
 
 <div class="cod"><i></i><pre><code class="html">&lt;div class=&quot;row-4&quot;&gt;
-    &lt;div class=&quot;col&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;col&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;col&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;col&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;col&quot;&gt;A&lt;/div&gt;
+    &lt;div class=&quot;col&quot;&gt;B&lt;/div&gt;
+    &lt;div class=&quot;col&quot;&gt;C&lt;/div&gt;
+    &lt;div class=&quot;col&quot;&gt;D&lt;/div&gt;
+    &lt;div class=&quot;col&quot;&gt;E&lt;/div&gt;
+    &lt;div class=&quot;col&quot;&gt;F&lt;/div&gt;
+    &lt;div class=&quot;col&quot;&gt;G&lt;/div&gt;
+    &lt;div class=&quot;col&quot;&gt;E&lt;/div&gt;
 &lt;/div&gt;</code></pre></div>
 
              
@@ -83,7 +90,7 @@
 <h5 class="no"><span>03<s class="sol"></s><s class="sag"></s></span></h5>
     <div class="dsc">
         <h4>Satırdan Ekran Şartı</h4>
-        <p>xs, sm, md, lg ekran oranları ile satırdan sütunü bölümlerini ekrana göre kolayca değişebilirsin</p>
+        <p>satırdan (row) sütun (col) sıralamaları ekrana göre değiştirilebilir</p>
     </div>
 
     <div class="sam">
@@ -342,19 +349,19 @@
     <div class="sam s_08_1">
         
         <div class="row middle">
-            <div class="col tc-top a"><span>A</span></div>
+            <div class="col tc-top a color-a"><span>A (top)</span></div>
             <div class="col b"><span>B</span></div>
             <div class="col c"><span>C</span></div>
-            <div class="col tc-bottom d"><span>D</span></div>
+            <div class="col tc-bottom d color-b"><span>D (bottom)</span></div>
         </div>
          
     </div>
 
 <div class="cod"><i></i><pre><code class="html">&lt;div class=&quot;row middle&quot;&gt;
-    &lt;div class=&quot;col tc-top &quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;col&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;col&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;col tc-bottom&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;col tc-top &quot;&gt;A&lt;/div&gt;
+    &lt;div class=&quot;col&quot;&gt;B&lt;/div&gt;
+    &lt;div class=&quot;col&quot;&gt;C&lt;/div&gt;
+    &lt;div class=&quot;col tc-bottom&quot;&gt;D&lt;/div&gt;
 &lt;/div&gt;</code></pre></div> 
 
 
@@ -371,51 +378,70 @@
     </div>
 
     <div class="sam">
-        
-        <div class="row">
-            <div class="col"><span>A</span></div>
-            <div class="col"><span>B</span></div>
-            <div class="col"><span>C</span></div>
-        </div>
-        
-        <div class="kesme">
-            <p><b>After<s class="sol"></s><s class="sag"></s></b></p>
-        </div>
-
-        <div class="row direct-xr">
-            <div class="col"><span>A</span></div>
-            <div class="col"><span>B</span></div>
-            <div class="col"><span>C</span></div>
+       <div class="row gut-2">
+            <div class="col">
+                <div class="row color">
+                    <div class="col"><span>A</span></div>
+                    <div class="col"><span>B</span></div>
+                    <div class="col"><span>C</span></div>
+                </div>
+                <div class="cod"><i></i><pre><code class="html">&lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col&quot;&gt;A&lt;/div&gt;
+    &lt;div class=&quot;col&quot;&gt;B&lt;/div&gt;
+    &lt;div class=&quot;col&quot;&gt;C&lt;/div&gt;
+&lt;/div&gt;</code></pre></div>
+            </div>
+            <div class="col">
+                       <div class="row direct-xr color">
+                    <div class="col"><span>A</span></div>
+                    <div class="col"><span>B</span></div>
+                    <div class="col"><span>C</span></div>
+                </div>
+                <div class="cod"><i></i><pre><code class="html">&lt;div class=&quot;row direct-xr&quot;&gt;
+    &lt;div class=&quot;col&quot;&gt;A&lt;/div&gt;
+    &lt;div class=&quot;col&quot;&gt;B&lt;/div&gt;
+    &lt;div class=&quot;col&quot;&gt;C&lt;/div&gt;
+&lt;/div&gt;</code></pre></div>
+            </div>
+           
         </div>
          
     </div>
-<div class="cod"><i></i><pre><code class="html">&lt;div class=&quot;row direct-xr&quot;&gt;
-    &lt;div class=&quot;col&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;col&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;col&quot;&gt;&lt;/div&gt;
+
+
+
+
+ <div class="sam">
+       <div class="row gut-2">
+            <div class="col">
+                <div class="row color direct-y">
+                    <div class="col"><span>A</span></div>
+                    <div class="col"><span>B</span></div>
+                    <div class="col"><span>C</span></div>
+                </div>
+                <div class="cod"><i></i><pre><code class="html">&lt;div class=&quot;row direct-y&quot;&gt;
+    &lt;div class=&quot;col&quot;&gt;A&lt;/div&gt;
+    &lt;div class=&quot;col&quot;&gt;B&lt;/div&gt;
+    &lt;div class=&quot;col&quot;&gt;C&lt;/div&gt;
 &lt;/div&gt;</code></pre></div>
-<span id="09.1"></span>
-<div class="dsc ara" >
-    <hr />
-    <p><span>Dikey Format</span></p>
-</div>
-
-
-<div class="sam">
-    
-    <div class="row direct-y">
-        <div class="col"><span>A</span></div>
-        <div class="col"><span>B</span></div>
-        <div class="col"><span>C</span></div>
+            </div>
+            <div class="col">
+                       <div class="row direct-yr color">
+                    <div class="col"><span>A</span></div>
+                    <div class="col"><span>B</span></div>
+                    <div class="col"><span>C</span></div>
+                </div>
+                <div class="cod"><i></i><pre><code class="html">&lt;div class=&quot;row direct-yr&quot;&gt;
+    &lt;div class=&quot;col&quot;&gt;A&lt;/div&gt;
+    &lt;div class=&quot;col&quot;&gt;B&lt;/div&gt;
+    &lt;div class=&quot;col&quot;&gt;C&lt;/div&gt;
+&lt;/div&gt;</code></pre></div>
+            </div>
+           
+        </div>
+         
     </div>
-     
-</div>
 
-<div class="cod"><i></i><pre><code class="html">&lt;div class=&quot;row direct-y&quot;&quot;&gt;
-    &lt;div class=&quot;col&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;col&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;col&quot;&gt;&lt;/div&gt;
-&lt;/div&gt;</code></pre></div>
 <span id="09.2"></span>
 <div class="dsc ara">
     <hr/>
@@ -424,7 +450,7 @@
 
 <div class="sam">
     
-    <div class="row direct-y-xs">
+    <div class="row direct-y-xs color">
         <div class="col"><span>A</span></div>
         <div class="col"><span>B</span></div>
         <div class="col"><span>C</span></div>
@@ -523,7 +549,7 @@
 
 </section>
              <section id="11">
-    <h5 class="no"><span>11<s class="sol"></s><s class="sag"></s></span></h5>
+	<h5 class="no"><span>11<s class="sol"></s><s class="sag"></s></span></h5>
     <div class="dsc">
         <h4>Between Dağılımı</h4>
         <p>sütunlar birbirlerinde ortanlı olarak ayrılarak tüm kasaya yayılı </p>
@@ -547,7 +573,7 @@
 &lt;/div&gt;</code></pre></div>
 </section>
              <section id="12">
-    <h5 class="no"><span>12<s class="sol"></s><s class="sag"></s></span></h5>
+	<h5 class="no"><span>12<s class="sol"></s><s class="sag"></s></span></h5>
     <div class="dsc">
         <h4>Around Dağılımı</h4>
         <p>sütunlar merkezde toplanarak birbirlerinde ortanlı olarak ayrılır</p>
@@ -569,7 +595,7 @@
 &lt;/div&gt;</code></pre></div>
 </section>
              <section id="13">
-    <h5 class="no"><span>13<s class="sol"></s><s class="sag"></s></span></h5>
+	<h5 class="no"><span>13<s class="sol"></s><s class="sag"></s></span></h5>
     <div class="dsc">
         <h4>Center Dağılım</h4>
         <p>sütunlar merkezde kalacak şekilde ortalanır</p>
@@ -585,13 +611,13 @@
          
     </div>
 <div class="cod"><i></i><pre><code class="html">&lt;div class=&quot;row center&quot;&gt;
-    &lt;div class=&quot;col-2&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;col-2&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;col-2&quot;&gt;&lt;/div&gt;
+	&lt;div class=&quot;col-2&quot;&gt;&lt;/div&gt;
+	&lt;div class=&quot;col-2&quot;&gt;&lt;/div&gt;
+	&lt;div class=&quot;col-2&quot;&gt;&lt;/div&gt;
 &lt;/div&gt;</code></pre></div>
 </section>
              <section id="14">
-    <h5 class="no"><span>14<s class="sol"></s><s class="sag"></s></span></h5>
+	<h5 class="no"><span>14<s class="sol"></s><s class="sag"></s></span></h5>
     <div class="dsc">
         <h4>Offset Öteleme</h4>
         <p>left yada right yönünde sütunları öteleyebiliriz</p>
@@ -621,15 +647,15 @@
 </div>
 
 <div class="sam">
-    <div class="row">
-        <div class="col-2 right-10"><span>A</span></div>
-        <div class="col-4 right-8"><span>B</span></div>
-    </div>
+	<div class="row">
+	    <div class="col-2 right-10"><span>A</span></div>
+	    <div class="col-4 right-8"><span>B</span></div>
+	</div>
 
-    <div class="row">
-        <div class="col-2 left-10"><span>A</span></div>
-        <div class="col-4 left-8"><span>B</span></div>
-    </div>
+	<div class="row">
+	    <div class="col-2 left-10"><span>A</span></div>
+	    <div class="col-4 left-8"><span>B</span></div>
+	</div>
 </div>
 
 <div class="cod"><i></i><pre><code class="html">&lt;div class=&quot;row&quot;&gt;
@@ -648,17 +674,17 @@
 </div>
 
 <div class="sam">
-    <div class="row">
-        <div class="col-2 right-5 right-xs-7"><span>A</span></div>
-        <div class="col-4 col-sm-6 left-3 left-sm-5"><span>B</span></div>
-    </div>
+	<div class="row">
+	    <div class="col-2 right-5 right-xs-7"><span>A</span></div>
+	    <div class="col-4 col-sm-6 left-3 left-sm-5"><span>B</span></div>
+	</div>
 </div>
 
 <div class="cod"><i></i><pre><code class="html">&lt;div class=&quot;sam&quot;&gt;
-    &lt;div class=&quot;row&quot;&gt;
-        &lt;div class=&quot;col-2 right-5 right-xs-7&quot;&gt;&lt;/div&gt;
-        &lt;div class=&quot;col-4 col-sm-6 left-3 left-sm-5&quot;&gt;&lt;/div&gt;
-    &lt;/div&gt;
+	&lt;div class=&quot;row&quot;&gt;
+	    &lt;div class=&quot;col-2 right-5 right-xs-7&quot;&gt;&lt;/div&gt;
+	    &lt;div class=&quot;col-4 col-sm-6 left-3 left-sm-5&quot;&gt;&lt;/div&gt;
+	&lt;/div&gt;
 &lt;/div&gt;</code></pre></div>
 </section>
              <section id="15">
@@ -689,7 +715,7 @@
 </div>
 
 <div class="sam s_15">
-    <div class="row c-nb c-ob-sm direct-y-sm">
+ 	<div class="row c-nb c-ob-sm direct-y-sm">
         <div class="col"><span>A</span></div>
         <div class="col"><span>B</span></div>
         <div class="col"><span>C</span></div>
@@ -747,41 +773,39 @@
 
 </section>
              <section id="16">
-    <h5 class="no"><span>16<s class="sol"></s><s class="sag"></s></span></h5>
+	<h5 class="no"><span>16<s class="sol"></s><s class="sag"></s></span></h5>
     <div class="dsc">
         <h4>Eşit Yükseklik</h4>
-        <p>Eğer chrome dışındaki bir tarayıcıdan bakıyorsanız aşağıdaki örnekteki a ve b sütunlarının aynı yüksekliğie eşitlendiğini görürsünüz. Bunun için sütün (col) içindeki ilk içerik kasasının height:100% değeri alması kafidir. Chrome'da çalışacak şekile daha uyumlu yapmak istersek bir alttaki örneğe bakınız.</p>
+        <p>iki yol var birincisi <b>c-eh</b> ( Col Equal Height ) methodu. Bu etiket col altındaki ilk elemente height 100% verir ve blocklar eşitlenir.</p>
     </div>
 
     <div class="sam s_16_1">
-        
-        <div class="row">
-            <div class="col"><span class="equal a">A (180 PX)</span></div>
-            <div class="col"><span class="equal">B</span></div>
+        <div class="row c-eh">
+            <div class="col"><span class="a">A (180 PX)</span></div>
+            <div class="col"><span>B</span></div>
         </div>
-         
     </div>
 <div class="cod"><i></i><pre><code class="html">&lt;div class=&quot;row&quot;&gt;
-&lt;div class=&quot;col&quot;&gt;&lt;span class=&quot;equal&quot;&gt;&lt;/span&gt;&lt;/div&gt;
-&lt;div class=&quot;col&quot;&gt;&lt;span class=&quot;equal&quot;&gt;&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;col&quot;&gt;&lt;span&gt;A&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;col&quot;&gt;&lt;span&gt;B&lt;/span&gt;&lt;/div&gt;
 &lt;/div&gt;</code></pre></div>
 
 
 <div class="dsc ara">
     <hr/>
-    <p><span>c-eh (child equal height) ile sütun (.col) içindeki kapsayıcı kasanın yüksekliklerini chrome bug' nı da atlatarak eşitlemiş oluruz. Bu teknikte sütunlar (col) flex özelliği alır bunan ötürü sütunun içindeki ilk content: width:100% vermelyiz !</span></p>
+    <p><span>İkinci yol ise <b>c-eh-2</b> methodudur. Bu etiket col'a ve altındaki ilk elemente flex özelliği sağlayarak eşitler</span></p>
 </div>
 
 <div class="sam s_16_2">
-    <div class="row c-eh">
-        <div class="col"><span class="equal a">A (180 PX)</span></div>
-        <div class="col"><span class="equal">B</span></div>
+	<div class="row c-eh-2">
+        <div class="col"><span class="a">A (180 PX)</span></div>
+        <div class="col"><span>B</span></div>
     </div>
 </div>
 
-<div class="cod"><i></i><pre><code class="html">&lt;div class=&quot;row c-eh&quot;&gt;
-    &lt;div class=&quot;col&quot;&gt;&lt;span class=&quot;class=&quot;equal&quot;&quot;&gt;&lt;/span&gt;&lt;/div&gt;
-    &lt;div class=&quot;col&quot;&gt;&lt;span class=&quot;class=&quot;equal&quot;&quot;&gt;&lt;/span&gt;&lt;/div&gt;
+<div class="cod"><i></i><pre><code class="html">&lt;div class=&quot;row c-eh-2&quot;&gt;
+    &lt;div class=&quot;col&quot;&gt;&lt;span&gt;A&lt;/span&gt;&lt;/div&gt;
+    &lt;div class=&quot;col&quot;&gt;&lt;span&gt;B&lt;/span&gt;&lt;/div&gt;
 &lt;/div&gt;</code></pre></div>
 
 </section>
@@ -789,72 +813,133 @@
     <h5 class="no"><span>17<s class="sol"></s><s class="sag"></s></span></h5>
     <div class="dsc">
         <h4>Aralık Ölçüleri</h4>
-        <p>Block boşluk aralıkları ( -gut ) ile küçültür ( gut ) ilede büyütülür.</p>
+        <p>Sayfa içinde spesifik bir yerde gutter boşluğunu genel yada belirli media boyunda  geniş veya dar olmasını istersek <b>-gut-</b>, <b>gut-</b> etiketlerini kullanabiliriz. Varsayılanda iki boy vardır, set.scss dosyasından daha fazla üretebilirsiniz</p>
     </div>
 
-    <div class="sam">
-        <div class="row c-nb center">
-            <div class="col-6 col-sm-12">
-                <div class="row">
-                    <div class="col"><span>Default</span></div>
-                    <div class="col"><span>Default</span></div>
+    <div class="sam s_17_1">
+        <div class="row center">
+            <div class="col-4 col-sm-12 w">
+                <div class="in">
+                    <div class="row c-nb c-ob-sm">
+                        <div class="col"><span>A</span></div>
+                        <div class="col"><span>B</span></div>
+                        <div class="col"><span>C</span></div>
+                        <div class="col"><span>D</span></div>
+                    </div>
                 </div>
-               <div class="row -gut-1">
-                    <div class="col"><span>-gut-1</span></div>
-                    <div class="col"><span>-gut-1</span></div>
+<div class="cod"><i></i><pre><code class="html">&lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col&quot;&gt;A&lt;/div&gt;
+    &lt;div class=&quot;col&quot;&gt;B&lt;/div&gt;
+    &lt;div class=&quot;col&quot;&gt;C&lt;/div&gt;
+    &lt;div class=&quot;col&quot;&gt;D&lt;/div&gt;
+&lt;/div&gt;</code></pre></div>
+ </div>
+            <div class="col-4 col-sm-12 w">
+                <div class="in">
+                   <div class="row -gut-1 c-nb c-ob-sm">
+                        <div class="col"><span>A</span></div>
+                        <div class="col"><span>B</span></div>
+                        <div class="col"><span>C</span></div>
+                        <div class="col"><span>D</span></div>
+                    </div>
                 </div>
-                <div class="row -gut-2">
-                    <div class="col"><span>-gut-2</span></div>
-                    <div class="col"><span>-gut-2</span></div>
-                </div>
-                
+<div class="cod"><i></i><pre><code class="html">&lt;div class=&quot;row -gut-1 &quot;&gt;
+    &lt;div class=&quot;col&quot;&gt;A&lt;/div&gt;
+    &lt;div class=&quot;col&quot;&gt;B&lt;/div&gt;
+    &lt;div class=&quot;col&quot;&gt;C&lt;/div&gt;
+    &lt;div class=&quot;col&quot;&gt;D&lt;/div&gt;
+&lt;/div&gt;</code></pre></div>
             </div>
+
+            <div class="col-4 col-sm-12 w">
+                <div class="in">
+                   <div class="row -gut-2 c-nb c-ob-sm">
+                        <div class="col"><span>A</span></div>
+                        <div class="col"><span>B</span></div>
+                        <div class="col"><span>C</span></div>
+                        <div class="col"><span>D</span></div>
+                    </div>
+                </div>
+<div class="cod"><i></i><pre><code class="html">&lt;div class=&quot;row -gut-2&quot;&gt;
+    &lt;div class=&quot;col&quot;&gt;A&lt;/div&gt;
+    &lt;div class=&quot;col&quot;&gt;B&lt;/div&gt;
+    &lt;div class=&quot;col&quot;&gt;C&lt;/div&gt;
+    &lt;div class=&quot;col&quot;&gt;D&lt;/div&gt;
+&lt;/div&gt;</code></pre></div>                
+            </div>
+   
            
         </div>
          
     </div>
 
-<div class="cod"><i></i><pre><code class="html">&lt;div class=&quot;row -gut-1&quot;&gt;
-    &lt;div class=&quot;col&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;col&quot;&gt;&lt;/div&gt;
-&lt;/div&gt;</code></pre></div>
 
 
 <div class="dsc ara">
     <hr/>
-    <p><span>gut büyük aralık örneği</span></p>
+    <p><span>Büyük Gutter Boşluğu</span></p>
 </div>
 
-<div class="sam">
-    <div class="row c-nb center">
-            <div class="col-6 col-sm-12">
-                <div class="row ">
-                    <div class="col"><span>Default</span></div>
-                    <div class="col"><span>Default</span></div>
+    <div class="sam s_17_1">
+        <div class="row center">
+            <div class="col-4 col-sm-12 w">
+                <div class="in">
+                    <div class="row c-nb c-ob-sm">
+                        <div class="col"><span>A</span></div>
+                        <div class="col"><span>B</span></div>
+                        <div class="col"><span>C</span></div>
+                        <div class="col"><span>D</span></div>
+                    </div>
                 </div>
-                 <div class="row  gut-1">
-                    <div class="col"><span>gut-1</span></div>
-                    <div class="col"><span>gut-1</span></div>
+<div class="cod"><i></i><pre><code class="html">&lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col&quot;&gt;A&lt;/div&gt;
+    &lt;div class=&quot;col&quot;&gt;B&lt;/div&gt;
+    &lt;div class=&quot;col&quot;&gt;C&lt;/div&gt;
+    &lt;div class=&quot;col&quot;&gt;D&lt;/div&gt;
+&lt;/div&gt;</code></pre></div>
+ </div>
+            <div class="col-4 col-sm-12 w">
+                <div class="in">
+                   <div class="row gut-1 c-nb c-ob-sm">
+                        <div class="col"><span>A</span></div>
+                        <div class="col"><span>B</span></div>
+                        <div class="col"><span>C</span></div>
+                        <div class="col"><span>D</span></div>
+                    </div>
                 </div>
-                 <div class="row  gut-2">
-                    <div class="col"><span>gut-2</span></div>
-                    <div class="col"><span>gut-2</span></div>
-                </div>
-              
-                
+<div class="cod"><i></i><pre><code class="html">&lt;div class=&quot;row gut-1&quot;&gt;
+    &lt;div class=&quot;col&quot;&gt;A&lt;/div&gt;
+    &lt;div class=&quot;col&quot;&gt;B&lt;/div&gt;
+    &lt;div class=&quot;col&quot;&gt;C&lt;/div&gt;
+    &lt;div class=&quot;col&quot;&gt;D&lt;/div&gt;
+&lt;/div&gt;</code></pre></div>
             </div>
+
+            <div class="col-4 col-sm-12 w">
+                <div class="in">
+                   <div class="row gut-2 c-nb c-ob-sm">
+                        <div class="col"><span>A</span></div>
+                        <div class="col"><span>B</span></div>
+                        <div class="col"><span>C</span></div>
+                        <div class="col"><span>D</span></div>
+                    </div>
+                </div>
+<div class="cod"><i></i><pre><code class="html">&lt;div class=&quot;row gut-2&quot;&gt;
+    &lt;div class=&quot;col&quot;&gt;A&lt;/div&gt;
+    &lt;div class=&quot;col&quot;&gt;B&lt;/div&gt;
+    &lt;div class=&quot;col&quot;&gt;C&lt;/div&gt;
+    &lt;div class=&quot;col&quot;&gt;D&lt;/div&gt;
+&lt;/div&gt;</code></pre></div>                
+            </div>
+   
            
         </div>
-</div>
-
-<div class="cod"><i></i><pre><code class="html">&lt;div class=&quot;row gut-1&quot;&gt;
-    &lt;div class=&quot;col&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;col&quot;&gt;&lt;/div&gt;
-&lt;/div&gt;</code></pre></div>
+         
+    </div>
 
 <div class="dsc ara">
     <hr/>
-    <p><span>ekrana göre yeniden formatlanabilir</span></p>
+    <p><span>Ekran Aralığı Desteği Var</span></p>
 </div>
 
 <div class="sam">

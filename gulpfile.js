@@ -12,6 +12,7 @@ gulp.task( 'styles', function() {
 	.pipe( rename( { suffix: '.min' } ) )
     .pipe( cssmin( { processImport : false } ) )
     .pipe( gulp.dest( 'dist' ) )
+    .pipe( gulp.dest( 'docs/css' ) )
 	//.pipe( notify({ message: 'sass files compiled'}) );
 } );
 

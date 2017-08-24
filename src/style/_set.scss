@@ -4,7 +4,7 @@
 
 $set                 : (
 
-   'columns'         : 12,
+   'columns'         : 16,
    'gut'             : (
       'd'            : 1rem,						
       's'            : (.6rem,.3rem),					
@@ -69,7 +69,6 @@ $gut              : map($set,'gut','d');
 $set-screen  : ();
 
 @each $key, $value in  map($set,'screen') {
-
   $set-screen : map-merge($set-screen, (#{$key} : 'screen and (#{$set-screen-rule}-width: #{$value})'));
 }
 
@@ -79,9 +78,11 @@ $set-col : '';
 
 @for $i from 0 to $set-column {
    $i : $i+1;
-   @if ($i==1)             { $set-col : (100%/$set-column) }
-   @if ($i!=1 and $i!=12)  { $set-col : append($set-col,(nth($set-col,1)*$i)) }
-   @if ($i==$set-column)   { $set-col : append($set-col,(100%))   }
+   
+   @if ($i!=1 and $i!=$set-column)  { $set-col : append($set-col,(nth($set-col,1)*$i)) }
+   @if ($i==$set-column)            { $set-col : append($set-col,(100%))   }
+   @if ($i==1)                      { $set-col : (100%/$set-column) }
+   
 }
 
 
@@ -91,6 +92,6 @@ $set-row : '';
 
 @for $i from 0 to $set-column {
    $i : $i+1;
-   @if ($i==1)            { $set-row  : (100%/$i) }
    @if ($i >1)            { $set-row  : append($set-row ,(100%/$i)) }
+   @if ($i==1)            { $set-row  : (100%/$i) }
 }

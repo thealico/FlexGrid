@@ -4,15 +4,15 @@
 
 @mixin make-row-number($n:false)          
 {
-   @for $i from 0 to $set-column          {
-      .row#{$n}-#{$i+1} > *               { flex-basis:nth($set-row, $i+1); max-width:nth($set-row, $i+1) } 
+   @for $i from 0 to $set-column                {
+      .row#{$n}-#{$i+1} > #{$select-colone}     { flex-basis:nth($set-row, $i+1); max-width:nth($set-row, $i+1) } 
    }
 }
 
 @mixin make-col-number($n:false)          
 {
-   @for $i from 0 to $set-column          {
-      #{$select-row } > .col#{$n}-#{$i+1} { flex-basis:nth($set-col, $i+1); max-width:nth($set-col, $i+1) }
+   @for $i from 0 to $set-column                {
+      #{$select-row } > .col#{$n}-#{$i+1}       { flex-basis:nth($set-col, $i+1); max-width:nth($set-col, $i+1) }
    }
 }
 
@@ -116,7 +116,7 @@
    }
 }
 
-@mixin make-offset($n)
+@mixin make-offset($n:false)
 {
    
    @if (map($set,'options','offset')){  
@@ -148,7 +148,7 @@
    }
 }
 
-@mixin make-space($n)
+@mixin make-space($n:false)
 {
    @if (map($set,'options','space')){  
       @for $i from 0 to length($gut-b ) {

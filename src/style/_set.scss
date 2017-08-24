@@ -11,11 +11,11 @@ $set                 : (
       'b'            : (1.5rem,2.5rem)	
    ),
    'screen'   			: (
-   	'ms'           : 23.5em,
-      'xs'           : 35.5em,
+      'lg'           : 80em,
+      'md'           : 64em,  
       'sm'           : 48em,
-      'md'           : 64em,
-      'lg'           : 80em
+      'xs'           : 35.5em,
+      'ms'           : 23.5em
    ),
    'options'         :  (
       'offset'       :  true,
@@ -24,10 +24,12 @@ $set                 : (
    ),
    'screen-rule'  	: 'max',
    'select'          : (
-      'row'          : '[class*="row"]',
-      'col'      		: '[class*="row"] > *',
-      'col-one'      : '[class*="col"]',
-      'col-row'      : '[class*="row"][class*="col"]'
+      'row'          : '[class*="row"]',                        
+      'col'      		: '[class*="row"] > [class*="col"]',      
+      'col-'         : '[class*="row"] > [class*="col-"]',     
+      'colcol'       : '[class*="row"] > .col',                
+      'colrow'       : '[class*="row"][class*="col"]',         
+      'colone'       : '[class*="col"]'                        
    )
 );
 
@@ -47,8 +49,10 @@ $set                 : (
 
 // -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -
 
-$select-colone    : map($set,'select','col-one');
-$select-colrow    : map($set,'select','col-row');
+$select-colone    : map($set,'select','colone');
+$select-colrow    : map($set,'select','colrow');
+$select-colcol    : map($set,'select','colcol');
+$select-col-      : map($set,'select','col-');
 $select-row       : map($set,'select','row');
 $select-col       : map($set,'select','col');
 

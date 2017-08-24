@@ -3,7 +3,7 @@
 Bu grid varsayılan olarak 12 sütun üzerine flexbox tekniği ile inşa edilmiştir. Css üreticisi olarak Sass, görev yöneticisi olarak Gulp tercih edilmiştir. Grid’in sütün sayısı (column), sütün aralıkları (gutter), ekran aralıkları (media), media  kural yönü tercihi (min / max) , özellik opsiyonları ve seçici kurallar _set.scss üzeriden özelleştirilebilmektedir.
 
 ### Row
-Saturın refrans aldığı değerler, örnekler için linklere bakınız.
+Satırın refrans aldığı değerler aşağıdaki gibidir, örnekler için linklere bakınız.
 
 * [center](https://thealico.github.io/flexboxgrid/example/#07)     - Sütunları yatayada ortalar
 * [start](https://thealico.github.io/flexboxgrid/example/#07)      - Sütünları sola yaslı sıralar
@@ -27,7 +27,7 @@ Saturın refrans aldığı değerler, örnekler için linklere bakınız.
 * [c-eh-1](https://thealico.github.io/flexboxgrid/example/#16) - ( Col Equal Height ) Sütunları flex methodu ile eşler 
 
 ### Col
-Sütunun refrans aldığı değerler, örnekler için linklere bakınız. Bir col aynı zamanda row etiketi özelliği alabiliyor col ve row'un aynı etiketlerinin çakışmaması için this col kısaltması olarak  **tc-** eki kullanıldı.
+Bunlarda sütunun refrans aldığı değerlerdir. Bir col aynı zamanda row etiketi özelliği alabiliyor col ve row'un aynı etiketlerinin çakışmaması için this col kısaltması olarak  **tc-** eki kullanıldı.
 
 * [tc-top](https://thealico.github.io/flexboxgrid/example/#08.4) Sütunu üste yaslar
 * [tc-middle](https://thealico.github.io/flexboxgrid/example/#08.3) Sütunu dikeyde ortalar

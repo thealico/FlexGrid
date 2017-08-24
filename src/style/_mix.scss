@@ -1,8 +1,6 @@
-/*
-@ Flexbox Grid Version 1.5.0  - https://github.com/thealico/flexboxgrid
-@ Front-end Developer by Ali Akman (alico) 
-@ http://alico.me  */
-
+// @ Flexbox Grid Version 1.5.0  - https://github.com/thealico/flexboxgrid
+// @ Front-end Developer by Ali Akman (alico) 
+// @ http://alico.me  */
 
 @mixin make-row-number($n:false)          
 {
@@ -64,14 +62,16 @@
 
    #{$select-row}                      {
 
+      
       .tc#{$n}-top                     { align-self: flex-start }
       .tc#{$n}-middle                  { align-self: center }
       .tc#{$n}-bottom                  { align-self: flex-end }
       .tc#{$n}-first                   { order: -1 }
       .tc#{$n}-last                    { order: 1 }
-      .tc#{$n}-ns                      { padding-left:0; padding-right: 0; padding-bottom: 0 }
       .tc#{$n}-ob                      { padding-bottom:$gut }
-      
+      .tc#{$n}-ns                      { padding-left:0; padding-right: 0; padding-bottom: 0 }
+      .tc#{$n}-nb                      { padding-bottom:0 }
+
       @for $i from 0 to length($gut-b) { 
          &.gut-#{$i+1} .tc#{$n}-ob     { padding-bottom:nth($gut-b,$i+1) }
       }

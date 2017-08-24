@@ -1,4 +1,5 @@
 node_modules
+.sass-cache
 components
 .tmp
 .DS_Store

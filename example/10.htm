@@ -10,27 +10,27 @@
         <div class="row">
             <div class="col"><span>A</span></div>
             <div class="col"><span>B</span></div>
-            <div class="col col-first"><span>C</span></div>
+            <div class="col tc-first"><span>C</span></div>
         </div>
          
          <div class="row">
             <div class="col"><span>A</span></div>
-            <div class="col  col-last"><span>B</span></div>
+            <div class="col  tc-last"><span>B</span></div>
             <div class="col"><span>C</span></div>
         </div>
     </div>
 
 <div class="cod"><i></i><?php echo '<pre><code class="html">';
 echo htmlentities('<div class="row">
-    <div class="col"></div>
-    <div class="col"></div>
-    <div class="col col-first"></div>
+    <div class="col">A</div>
+    <div class="col">B</div>
+    <div class="col tc-first">C</div>
 </div>
  
 <div class="row">
-    <div class="col"></div>
-    <div class="col  col-last"></div>
-    <div class="col"></div>
+    <div class="col">A</div>
+    <div class="col  tc-last">B</div>
+    <div class="col">C</div>
 </div>');
 echo '</code></pre>' ?>
 </div>

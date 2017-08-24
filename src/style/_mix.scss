@@ -50,8 +50,13 @@
          }
 
          &.c-nf > *                    { flex:none }
-         &.c-eh > *                    { display:flex;
-            > .equal                   { width:100%; height:auto; display:block }
+         
+         &.c-eh > *                    { 
+            > *                        { height: 100%;  width: 100%; display: block  }
+         }
+
+         &.c-eh-2 > *                   { display:flex;
+            > *                         { flex: 1 0 100% }
          }
       }
    }

@@ -2,21 +2,19 @@
 	<h5 class="no"><span>16<s class="sol"></s><s class="sag"></s></span></h5>
     <div class="dsc">
         <h4>Eşit Yükseklik</h4>
-        <p>Eğer chrome dışındaki bir tarayıcıdan bakıyorsanız aşağıdaki örnekteki a ve b sütunlarının aynı yüksekliğie eşitlendiğini görürsünüz. Bunun için sütün (col) içindeki ilk içerik kasasının height:100% değeri alması kafidir. Chrome'da çalışacak şekile daha uyumlu yapmak istersek bir alttaki örneğe bakınız.</p>
+        <p>iki yol var birincisi <b>c-eh</b> ( Col Equal Height ) methodu. Bu etiket col altındaki ilk elemente height 100% verir ve blocklar eşitlenir.</p>
     </div>
 
     <div class="sam s_16_1">
-        
-        <div class="row">
-            <div class="col"><span class="equal a">A (180 PX)</span></div>
-            <div class="col"><span class="equal">B</span></div>
+        <div class="row c-eh">
+            <div class="col"><span class="a">A (180 PX)</span></div>
+            <div class="col"><span>B</span></div>
         </div>
-         
     </div>
 <div class="cod"><i></i><?php echo '<pre><code class="html">';
 echo htmlentities('<div class="row">
-<div class="col"><span class="equal"></span></div>
-<div class="col"><span class="equal"></span></div>
+<div class="col"><span>A</span></div>
+<div class="col"><span>B</span></div>
 </div>');
 echo '</code></pre>' ?>
 </div>
@@ -24,20 +22,20 @@ echo '</code></pre>' ?>
 
 <div class="dsc ara">
     <hr/>
-    <p><span>c-eh (child equal height) ile sütun (.col) içindeki kapsayıcı kasanın yüksekliklerini chrome bug' nı da atlatarak eşitlemiş oluruz. Bu teknikte sütunlar (col) flex özelliği alır bunan ötürü sütunun içindeki ilk content: width:100% vermelyiz !</span></p>
+    <p><span>İkinci yol ise <b>c-eh-2</b> methodudur. Bu etiket col'a ve altındaki ilk elemente flex özelliği sağlayarak eşitler</span></p>
 </div>
 
 <div class="sam s_16_2">
-	<div class="row c-eh">
-        <div class="col"><span class="equal a">A (180 PX)</span></div>
-        <div class="col"><span class="equal">B</span></div>
+	<div class="row c-eh-2">
+        <div class="col"><span class="a">A (180 PX)</span></div>
+        <div class="col"><span>B</span></div>
     </div>
 </div>
 
 <div class="cod"><i></i><?php echo '<pre><code class="html">';
-echo htmlentities('<div class="row c-eh">
-    <div class="col"><span class="class="equal""></span></div>
-    <div class="col"><span class="class="equal""></span></div>
+echo htmlentities('<div class="row c-eh-2">
+    <div class="col"><span>A</span></div>
+    <div class="col"><span>B</span></div>
 </div>');
 echo '</code></pre>' ?>
 </div>

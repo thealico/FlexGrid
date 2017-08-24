@@ -1,7 +1,7 @@
 # Flexbox Grid
 Bu grid modeli 12 sütun üzerine [flexbox](http://www.w3schools.com/css/css3_flexbox.asp) tekniği ile inşa edilmiştir. Css üreticisi olarak Sass, görev yöneticisi olarakta Gulp tercih edilmiştir. Media değer aralıkları aşağıdaki tabloda görüldüğü gibidir.
 
-[Demo Sayfası](http://alico.me/labs/grid/example/)
+[Demo Sayfası](https://thealico.github.io/flexboxgrid/example/)
 
 | Media Değerleri      | MS <br> ( 376 > )  | XS <br> ( 568 > ) | SM <br> ( 768 > )  |   MD <br> ( 1024 > )  |  LG <br> ( 1280 > )  |
 | ---                  | ---                | ---               | ---                |  ---                  | ---                  |

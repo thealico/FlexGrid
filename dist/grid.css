@@ -167,12 +167,14 @@
   padding-bottom: 0; }
 [class*="row"].c-nf > * {
   flex: none; }
-[class*="row"].c-eh > * {
+[class*="row"].c-eh > * > * {
+  height: 100%;
+  width: 100%;
+  display: block; }
+[class*="row"].c-eh-2 > * {
   display: flex; }
-  [class*="row"].c-eh > * > .equal {
-    width: 100%;
-    height: auto;
-    display: block; }
+  [class*="row"].c-eh-2 > * > * {
+    flex: 1 0 100%; }
 
 [class*="row"] .tc-top {
   align-self: flex-start; }

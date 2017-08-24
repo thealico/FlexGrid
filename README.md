@@ -1,16 +1,19 @@
-# FlexGrid
+## FlexGrid
 
 Bu grid varsayılan olarak 12 sütun üzerine flexbox tekniği ile inşa edilmiştir. Css üreticisi olarak Sass, görev yöneticisi olarak Gulp tercih edilmiştir. 	
 
 Grid’in sütün sayısı (column), sütün aralıkları (gutter), ekran aralıkları (media), media  kural yönü tercihi (min / max) , özellik opsiyonları ve seçici kurallar _set.scss üzeriden özelleştirilebilmektedir.
 
-* [center](https://thealico.github.io/flexboxgrid/example/#07)        Sütunları yatayada ortalar
-* [start](https://thealico.github.io/flexboxgrid/example/#07)         Sütünları sola yaslı sıralar 
-* [between](https://thealico.github.io/flexboxgrid/example/#11)       Sütünları sol ve sağa doğru sonlandırarak sıralar 
-* [around](https://thealico.github.io/flexboxgrid/example/#12)        Sütunları merkeden ortalayarak sağa ve sola doğru sıralar 
-* [end](https://thealico.github.io/flexboxgrid/example/#07)           Sütunları sağa doğru yaslıyarak sıralar
-* [middle](https://thealico.github.io/flexboxgrid/example/#08)        Sütünları dikeyde rtalar
-* [bottom](https://thealico.github.io/flexboxgrid/example/#08)        Sütunları alta yaslar
+### Row
+Satırın refrans aldığı etiketler aşağıda gibidir. Canlı örneklerini görmek için etiket linklerine tıklayın.
+
+* [center](https://thealico.github.io/flexboxgrid/example/#07)     **(-)** Sütunları yatayada ortalar
+* [start](https://thealico.github.io/flexboxgrid/example/#07)      **(-)** Sütünları sola yaslı sıralar 
+* [between](https://thealico.github.io/flexboxgrid/example/#11)    **(-)** Sütünları sol ve sağa doğru sonlandırarak sıralar 
+* [around](https://thealico.github.io/flexboxgrid/example/#12)     **(-)** Sütunları merkeden ortalayarak sağa ve sola doğru sıralar 
+* [end](https://thealico.github.io/flexboxgrid/example/#07)        **(-)** Sütunları sağa doğru yaslıyarak sıralar
+* [middle](https://thealico.github.io/flexboxgrid/example/#08)     **(-)** Sütünları dikeyde rtalar
+* [bottom](https://thealico.github.io/flexboxgrid/example/#08)     **(-)** Sütunları alta yaslar
 * top                
 * stretch            
 * baseline           

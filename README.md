@@ -1,6 +1,6 @@
 ## FlexGrid
 
-Bu grid varsayılan olarak 12 sütun üzerine flexbox tekniği ile inşa edilmiştir. Css üreticisi olarak Sass, görev yöneticisi olarak Gulp tercih edilmiştir. Grid’in sütün sayısı (column), sütün aralıkları (gutter), ekran aralıkları (media), media  kural yönü tercihi (min / max) , özellik opsiyonları ve seçici kurallar _set.scss üzeriden özelleştirilebilmektedir.
+Bu grid varsayılan olarak 12 sütun üzerine flexbox tekniği ile inşa edilmiştir. Css üreticisi olarak Sass, görev yöneticisi olarak Gulp tercih edilmiştir. Grid’in sütün sayısı (column), sütün aralıkları (gutter), ekran aralıkları (media), media  kural yönü tercihi (min / max) , özellik opsiyonları ve seçici kurallar [set.scss](https://github.com/thealico/FlexGrid/blob/master/src/style/_set.scss) üzerinden özelleştirebilirsiniz.
 
 ### Row
 Satırın refrans aldığı değerler aşağıdaki gibidir, örnekler için linklere bakınız.
@@ -34,7 +34,7 @@ Bunlarda sütunun refrans aldığı değerlerdir. Bir col aynı zamanda row etik
 * [tc-bottom ](https://thealico.github.io/flexboxgrid/example/#08.1) Alta yaslar
 * [tc-ns] - Gutter boşluğunu (padding) alır
 * [tc-nb] - Alt gutter boşluğunu (padding) alır
-* [tc-ob] - Alt gutter boşluğunu (padding) verir
+* [tc-ob] - Alt gutter boşluğunu (padding) aktif eder
 * [tc-first](https://thealico.github.io/flexboxgrid/example/#10)  
 * [tc-last](https://thealico.github.io/flexboxgrid/example/#10) 
 * [order-](https://thealico.github.io/flexboxgrid/example/#10.1) Sütunun sırasını değişir

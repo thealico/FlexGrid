@@ -5,7 +5,7 @@
     <title>FlexGrid Sistem</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/example.css">
-    <link rel="stylesheet" href="../dist/grid.css">
+    <link rel="stylesheet" href="css/grid.min.css">
 </head>
 
     <body>

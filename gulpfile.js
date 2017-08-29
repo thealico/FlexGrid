@@ -8,7 +8,8 @@ rename = require( 'gulp-rename' );
 gulp.task( 'styles', function() {
 	return sass( 'src/style/**/*.scss' ).on( 'error', sass.logError )
 	//.pipe( autoprefixer( 'last 2 version' ) )
-	.pipe( gulp.dest( 'dist' ) )
+	.pipe( gulp.dest( 'dist' ) ) 
+	.pipe( gulp.dest( 'docs/css' ) )
 	.pipe( rename( { suffix: '.min' } ) )
     .pipe( cssmin( { processImport : false } ) )
     .pipe( gulp.dest( 'dist' ) )

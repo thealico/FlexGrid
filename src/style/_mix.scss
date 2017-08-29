@@ -37,9 +37,11 @@
       &.direct-y#{$n}                  { flex-direction: column }
       &.direct-yr#{$n},&.direct-y#{$n} { > #{$select-colone} { flex-basis: auto; width:100% } }
       
-      &.c-nb#{$n} > *                  { padding-bottom:0 }
-      &.c-ob#{$n} > *                  { padding-bottom:$gut }
-      &.c-nf#{$n} > *                  { flex:none }
+      
+      &.c-op#{$n} > *                  { padding-left:$gut/2; padding-right:$gut/2 }   // child/col on padding ( left-right-bottom gutter )
+      &.c-nb#{$n} > *                  { padding-bottom:0 }                            // child/col no bottom  ( bottom gutter )
+      &.c-ob#{$n} > *                  { padding-bottom:$gut }                         // child/col on bottom  ( bottom gutter )
+      &.c-nf#{$n} > *                  { flex:none }                                   // child/col no flex
       
       @if not $n                       { 
 
@@ -73,14 +75,6 @@
       .tc#{$n}-ns                      { padding-left:0; padding-right: 0; padding-bottom: 0 }
       .tc#{$n}-ob                      { padding-bottom:$gut }
       .tc#{$n}-nb                      { padding-bottom:0 }
-
-      @for $i from 0 to length($gut-b) { 
-         &.gut-#{$i+1} .tc#{$n}-ob     { padding-bottom:nth($gut-b,$i+1) }
-      }
-
-      @for $i from 0 to length($gut-s) { 
-         &.-gut-#{$i+1} .tc#{$n}-ob    { padding-bottom:nth($gut-s,$i+1) }
-      }
    }
 }
 
@@ -142,6 +136,7 @@
 @mixin make-space($n:false)
 {
    @if (map($set,'options','space')){  
+      
       @for $i from 0 to length($gut-b ) {
          
          $v :nth($gut-b , $i+1);
@@ -149,8 +144,10 @@
          #{$select-row}                   {
             
             &.gut-#{$i+1}#{$n}            { margin-left:(-$v/2); margin-right:(-$v/2);
-               > *                        { padding-left:($v/2); padding-right:($v/2); padding-bottom:$v }
-               &.c-ob#{$n} > *            { padding-bottom:$v  }
+               > #{$select-colone}        { padding-left:($v/2); padding-right:($v/2); padding-bottom:$v  }
+               &.c-op#{$n} > *            { padding-left:($v/2); padding-right:($v/2); }
+               &.c-ob#{$n} > *            { padding-bottom:$v }
+               .tc#{$n}-ob                { padding-bottom:$v }
             }
          }
       }
@@ -161,16 +158,22 @@
          
          #{$select-row}                   {
             &.-gut-#{$i+1}#{$n}           { margin-left:(-$v/2); margin-right:(-$v/2);
-               > *                        { padding-left:($v/2); padding-right:($v/2); padding-bottom:$v  }
-               &.c-ob#{$n} > *            { padding-bottom:$v  }
+               > #{$select-colone}        { padding-left:($v/2); padding-right:($v/2); padding-bottom:$v  }
+               &.c-op#{$n} > *            { padding-left:($v/2); padding-right:($v/2); }
+               &.c-ob#{$n} > *            { padding-bottom:$v }
+               .tc#{$n}-ob                { padding-bottom:$v }
             }
          }
       }
-       
+      
+      $v : $gut;
+
       #{$select-row}                      {
-         .gut#{$n}                        { margin-left:(-$gut/2); margin-right:(-$gut/2);
-            > *                           { padding-left:($gut/2); padding-right:($gut/2); padding-bottom:$gut  }
-            &.c-ob#{$n} > *               { padding-bottom:$gut  }
+         .gut#{$n}                        { margin-left:(-$v/2); margin-right:(-$v/2);
+            > #{$select-colone}           { padding-left:($v/2); padding-right:($v/2); padding-bottom:$v  }
+            &.c-op#{$n} > *               { padding-left:($v/2); padding-right:($v/2); }
+            &.c-ob#{$n} > *               { padding-bottom:$v }
+            .tc#{$n}-ob                   { padding-bottom:$v }
          }
       }
    }

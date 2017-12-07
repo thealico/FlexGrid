@@ -37,11 +37,12 @@
       &.direct-y#{$n}                  { flex-direction: column }
       &.direct-yr#{$n},&.direct-y#{$n} { > #{$select-colone} { flex-basis: auto; width:100% } }
       
+      &.c-op#{$n} > *                  { padding-left:$gut/2; padding-right:$gut/2 }   // left, right gutter on
       
-      &.c-op#{$n} > *                  { padding-left:$gut/2; padding-right:$gut/2 }   // child/col on padding ( left-right-bottom gutter )
-      &.c-nb#{$n} > *                  { padding-bottom:0 }                            // child/col no bottom  ( bottom gutter )
-      &.c-ob#{$n} > *                  { padding-bottom:$gut }                         // child/col on bottom  ( bottom gutter )
-      &.c-nf#{$n} > *                  { flex:none }                                   // child/col no flex
+      &.c-nb#{$n} > #{$select-colone}  { padding-bottom:0 }        // bottom gutter on      
+      &.c-ob#{$n} > #{$select-colone}  { padding-bottom:$gut  }    // bottom gutter of      
+      
+      &.c-nf#{$n} > *                  { flex:none }                                   
       
       @if not $n                       { 
 
@@ -74,32 +75,10 @@
       .tc#{$n}-last                    { order: 1 }
       .tc#{$n}-ns                      { padding-left:0; padding-right: 0; padding-bottom: 0 }
       .tc#{$n}-ob                      { padding-bottom:$gut }
-      .tc#{$n}-nb                      { padding-bottom:0 }
+      .tc#{$n}-nb                      { padding-bottom:0!important }
    }
 }
 
-@mixin make-padding( $n:false )  
-{
-
-   #{$select-row}                { 
-      &.cp                       {
-
-         > *  { padding-left:($gut/2); padding-right:($gut/2) }
-      
-         @for $i from 0 to length($gut-s) {
-
-            $v : nth($gut-s,$i+1);
-            &.-gut-#{$i+1} > *     { padding-left:($v/2); padding-right:($v/2) }
-         }
-
-         @for $i from 0 to length($gut-b)  {
-
-            $v : nth($gut-b,$i+1);
-            &.gut-#{$i+1} > *     { padding-left:($v/2); padding-right:($v/2)  }
-         }   
-      }
-   }
-}
 
 @mixin make-offset($n:false)
 {
@@ -135,47 +114,68 @@
 
 @mixin make-space($n:false)
 {
-   @if (map($set,'options','space')){  
+   @if (map($set,'options','space')) {  
       
       @for $i from 0 to length($gut-b ) {
          
          $v :nth($gut-b , $i+1);
 
-         #{$select-row}                   {
+         #{$select-row}                         {
             
-            &.gut-#{$i+1}#{$n}            { margin-left:(-$v/2); margin-right:(-$v/2);
-               > #{$select-colone}        { padding-left:($v/2); padding-right:($v/2); padding-bottom:$v  }
-               &.c-op#{$n} > *            { padding-left:($v/2); padding-right:($v/2); }
-               &.c-ob#{$n} > *            { padding-bottom:$v }
-               .tc#{$n}-ob                { padding-bottom:$v }
+            &.gut-#{$i+1}#{$n}                 { margin-left:(-$v/2); margin-right:(-$v/2);
+               > #{$select-colone}             { padding-left:($v/2); padding-right:($v/2); padding-bottom:$v }
+               &.c-op > *                      { padding-left:($v/2); padding-right:($v/2) }
+               
+               @if $n {
+                  &.c-ob                       { > #{$select-colone} { padding-bottom:$v }  }   
+                  @each $key, $value in $set-screen{
+                     &.c-ob-#{$key}            { > #{$select-colone} { padding-bottom:$v }  }   
+                  }   
+               }
+               .tc#{$n}-ob                     { padding-bottom:$v }
+               
             }
+           
          }
       }
       
       @for $i from 0 to length($gut-s ) {
          
          $v :nth($gut-s , $i+1);
-         
-         #{$select-row}                   {
-            &.-gut-#{$i+1}#{$n}           { margin-left:(-$v/2); margin-right:(-$v/2);
-               > #{$select-colone}        { padding-left:($v/2); padding-right:($v/2); padding-bottom:$v  }
-               &.c-op#{$n} > *            { padding-left:($v/2); padding-right:($v/2); }
-               &.c-ob#{$n} > *            { padding-bottom:$v }
-               .tc#{$n}-ob                { padding-bottom:$v }
-            }
+
+         #{$select-row}                         {
+            &.-gut-#{$i+1}#{$n}                 { margin-left:(-$v/2); margin-right:(-$v/2);
+               > #{$select-colone}              { padding-left:($v/2); padding-right:($v/2); padding-bottom:$v  }
+               &.c-op > *                       { padding-left:($v/2); padding-right:($v/2) }
+               
+               @if $n {
+                  &.c-ob                        { > #{$select-colone} { padding-bottom:$v }  }   
+                  @each $key, $value in $set-screen{
+                     &.c-ob-#{$key}             { > #{$select-colone} { padding-bottom:$v }  }   
+                  }   
+               }
+               .tc#{$n}-ob                      { padding-bottom:$v }
+            } 
          }
       }
       
       $v : $gut;
 
-      #{$select-row}                      {
-         .gut#{$n}                        { margin-left:(-$v/2); margin-right:(-$v/2);
-            > #{$select-colone}           { padding-left:($v/2); padding-right:($v/2); padding-bottom:$v  }
-            &.c-op#{$n} > *               { padding-left:($v/2); padding-right:($v/2); }
-            &.c-ob#{$n} > *               { padding-bottom:$v }
-            .tc#{$n}-ob                   { padding-bottom:$v }
+      #{$select-row}                            {
+         &.gut-0#{$n}                           { margin-left:(-$v/2); margin-right:(-$v/2);
+            > #{$select-colone}                 { padding-left:($v/2); padding-right:($v/2); padding-bottom:$v }
+            &.c-op > *                          { padding-left:($v/2); padding-right:($v/2) }
+            
+             @if $n {
+                  &.c-ob                         { > #{$select-colone} { padding-bottom:$v }  }   
+                  @each $key, $value in $set-screen{
+                     &.c-ob-#{$key}              { > #{$select-colone} { padding-bottom:$v }  }   
+                  }   
+               }
+
+            .tc#{$n}-ob                          { padding-bottom:$v }
+
          }
       }
    }
 }
-

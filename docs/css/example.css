@@ -65,6 +65,9 @@ margin-left:-10px;
 top: -9px
 }
 
+.mb-1 			{ margin-bottom: 1rem  }
+
+
 .s_05 .row > .col:nth-child(2n+1) span { background-color:#8387C1 }
 
 .s_08 .row		{ height: 100px; background: #F7D997}

@@ -1,14 +1,14 @@
 /*
 @ Flexbox Grid Version 1.5.0  - https://github.com/thealico/flexboxgrid
 @ Front-end Developer by Ali Akman (alico) 
-@ http://alico.me  */
+@ http://akman.me  */
 
 @import "set";
 @import "mix";
 
-#{$select-row}           	{ display: flex; flex-flow:row wrap; box-sizing: border-box; margin-left:(-$gut/2); margin-right: (-$gut/2) } 
-#{$select-col}		      	{ flex: 1 1 0% ; box-sizing: border-box; padding-left:($gut/2); padding-right:($gut/2); padding-bottom:$gut }
-#{$select-col-}     	    { flex:none }
+#{$select-row}           	{ --rg:#{$gut};--cg:#{$gut}; display: flex; flex-flow:row wrap; box-sizing: border-box; column-gap:var(--cg); row-gap:var(--rg) } 
+#{$select-col}		      	{ flex: 1 1 0% ; box-sizing: border-box;  }
+#{$select-col-}     	    { flex: none }
 #{$select-colcol}           { flex: 1 1 0% }
 #{$select-colrow}           { margin-left:0; margin-right:0; padding-left:0; padding-right:0 }
 

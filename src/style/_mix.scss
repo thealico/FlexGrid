@@ -6,14 +6,14 @@
 {
    @for $i from 0 to $set-column                {
       
-      .row#{$n}-#{$i+1} > #{$select-colone}     { flex-basis: calc( #{nth($set-row, $i+1)} - var(--cg) ); max-width: calc( #{nth($set-row, $i+1)} - var(--cg) ) } 
+      .row#{$n}-#{$i+1} > #{$select-colone}     { flex-basis: calc( #{nth($set-row, $i+1)} - ( var(--cg) * #{$i} / #{$i+1} ) );  max-width: calc( #{nth($set-row, $i+1)} - ( var(--cg) * #{$i} / #{$i+1} ) )   } 
    }
 }
 
 @mixin make-col-number($n:false)          
 {
    @for $i from 0 to $set-column                {
-      #{$select-row } > .col#{$n}-#{$i+1}       { flex-basis: calc( #{nth($set-col, $i+1)} - var(--cg) ); max-width: calc( #{nth($set-col, $i+1)} - var(--cg) ) }
+      #{$select-row } > .col#{$n}-#{$i+1}       { flex-basis: calc( #{nth($set-col, $i+1)} - ( var(--cg) * #{$i} / #{$i+1} ) ); max-width: calc( #{nth($set-col, $i+1)} - ( var(--cg) * #{$i} / #{$i+1} ) )  }
    }
 }
 

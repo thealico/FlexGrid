@@ -7,15 +7,20 @@
    @for $i from 0 to $set-column                {
       
       .row#{$n}-#{$i+1} > #{$select-colone}     { flex-basis: calc( #{nth($set-row, $i+1)} - ( var(--cg) * #{$i} / #{$i+1} ) );  max-width: calc( #{nth($set-row, $i+1)} - ( var(--cg) * #{$i} / #{$i+1} ) )   } 
+
    }
 }
 
 @mixin make-col-number($n:false)          
 {
    @for $i from 0 to $set-column                {
+      
       #{$select-row } > .col#{$n}-#{$i+1}       { flex-basis: calc( #{nth($set-col, $i+1)} - ( var(--cg) * #{$i} / #{$i+1} ) ); max-width: calc( #{nth($set-col, $i+1)} - ( var(--cg) * #{$i} / #{$i+1} ) )  }
+
    }
 }
+
+
 
 @mixin make-row-option($n:false)       
 {
@@ -49,10 +54,12 @@
       
       &.c-nf#{$n} > *                  { flex: none }                                   
       
+      &.ns#{$n},&.nsc#{$n}             { --rg:0; --cg:0 }
+
       @if not $n                       { 
 
          &.nsc                         { margin-left:auto; margin-right:auto }
-         &.ns,&.nsc                    { --rg:0; --cg:0 }
+         // &.ns,&.nsc                    { --rg:0; --cg:0 }
          
          &.c-eh > *                    {
             > *                        { height: 100%;  width: 100%; display: block  }
@@ -75,6 +82,7 @@
       .tc#{$n}-bottom                  { align-self: flex-end }
       .tc#{$n}-first                   { order: -1 }
       .tc#{$n}-last                    { order: 1 }
+      //.tc#{$n}-ns                    { padding-left:0; padding-right: 0; padding-bottom: 0 }
       .tc#{$n}-ns                      { padding-left:0; padding-right: 0; padding-bottom: 0 }
       .tc#{$n}-ob                      { padding-bottom:$gut }
       .tc#{$n}-nb                      { padding-bottom:0!important }
